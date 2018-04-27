@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/goods.css" type="text/css">
+</head>
+<body>
+<div class="public-top">
+    <div class="topbar">
+        <div class="user-entry">
+            您好，欢迎来到 <a href="../index.html" title="首页" alt="首页">中域商城</a> <span>[<a href="login.html" id="user_name">登录</a>]</span> <span>[<a href="register.html" id="exit">注册</a>]</span>
+        </div>
+        <div class="quick-menu">
+            <ul>
+                <li style="margin-left: 85px">
+                    <a href="javascript:void(0);">中域官网</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">手机触屏版</a>
+                </li>
+                <li class="serve">
+                    <a href="javascript:void(0);">免费开店</a><i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);" title="招商入驻">招商入驻</a></li>
+                        <li><a href="javascript:void(0);" target="_blank" title="登录商家管理中心">商家登录</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    <a href="javascript:void(0);">我的订单</a><i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);">待付款订单</a></li>
+                        <li><a href="javascript:void(0);">待确认收货</a></li>
+                        <li><a href="javascript:void(0);">待评价交易</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    <a href="javascript:void(0);">我的收藏</a><i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);">商品收藏</a></li>
+                        <li><a href="javascript:void(0);">店铺收藏</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    客户服务<i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);">帮助中心</a></li>
+                        <li><a href="javascript:void(0);">售后服务</a></li>
+                        <li><a href="javascript:void(0);">客服中心</a></li>
+                    </ul>
+                </li>
+                <li class="wechat">
+                    关注我们<i></i>
+                    <div class="weixin">
+                        <h4>扫描二维码<br>关注商城微信号</h4>
+                        <img src="../images/04871787573066174.png">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="header-warp cl" style="min-width: 1240px">
+    <div class="public-head-layout">
+        <h1 class="site-logo"><a href="http://www.zhongyu.com/"><img src="../images/04833010951413373.png" class="pngFix"></a></h1>
+    </div>
+    <div class="head-app">
+        <span class="pic"></span>
+        <div class="download-app">
+            <div class="qrcode">
+                <img src="http://www.zhongyu.com/data/upload/shop/common/mb_app.png">
+            </div>
+            <div class="hint">
+                <h4>扫描二维码</h4>
+                下载手机客户端
+            </div>
+            <div class="addurl">
+                <a href="http://www.zhongyu.com/appfile/zhongyuo2ov2.1.6.apk" target="_blank">Android</a>
+                <a href="itms-services://?action=download-manifest&amp;url=https://downloadpkg.apicloud.com:443/zip/f3/4e/f34e509fa199864baf8f4ad5c6feef6d.plist" target="_blank">iPhone</a>
+            </div>
+        </div>
+    </div>
+    <div class="head-search-bar">
+        <ul class="tab">
+            <li title="请输入您要搜索的商品关键字" act="search" class="current">商品</li>
+            <li title="请输入您要搜索的店铺关键字" act="store_list">店铺</li>
+        </ul>
+        <form action="" class="search-form" method="get">
+            <input placeholder="请输入您要搜索的商品关键字" name="keyword" id="keyword" class="input-text"  type="text">
+            <input id="button" value="搜索" class="input-submit" type="submit">
+        </form>
+        <div class="keyword">
+            热门搜索：
+            <ul>
+                <li><a href="javascript:void(0);">手机</a></li>
+                <li><a href="javascript:void(0);">电脑</a></li>
+                <li><a href="javascript:void(0);">蓝牙</a></li>
+                <li><a href="javascript:void(0);">手表</a></li>
+                <li><a href="javascript:void(0);">荣耀</a></li>
+                <li><a href="javascript:void(0);">iPhone8</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="head-user-menu">
+        <div class="my-mall">
+            <span class="ico"></span>我的商城<i class="arrow"></i>
+        </div>
+        <div class="shopping-car">
+            <a href="login.html" id="shopping-cart">
+                <span class="ico"></span>购物车结算<i class="arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="public-nav-layout">
+    <div class="wrapper cl">
+        <div class="all-category">
+            <div class="title">
+                <i></i>
+                <h3><a href="javascript:void(0);">所有商品分类</a></h3>
+            </div>
+            <ul class="menu">
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-256.jpg" alt="">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="javascript:void(0);">手机通讯</a></h4>
+                        <span class="recommend-class">
+                            <a href="javascript:void(0);" title="4G全网通">4G全网通</a>
+                            <a href="javascript:void(0);" title="老人手机">老人手机</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="javascript:void(0);">智能手机</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">4G全网通丨</a>
+                            </p>
+                            <div class="brands-class">
+                                <h5>品牌：</h5>
+                                <a href="javascript:void(0);">三星丨</a>
+                                <a href="javascript:void(0);">苹果（APPLE）丨</a>
+                                <a href="javascript:void(0);">魅族丨</a>
+                                <a href="javascript:void(0);">康佳丨</a>
+                                <a href="javascript:void(0);">金立丨</a>
+                                <a href="javascript:void(0);">中兴丨</a>
+                                <a href="javascript:void(0);">酷派丨</a>
+                                <a href="javascript:void(0);">努比亚丨</a>
+                                <a href="javascript:void(0);">乐视丨</a>
+                                <a href="javascript:void(0);">锤子丨</a>
+                            </div>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="javascript:void(0);">传统手机</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">老人手机丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-1.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="javascript:void(0);">电脑办公</a></h4>
+                        <span class="recommend-class">
+                            <a href="javascript:void(0);" title="笔记本">笔记本</a>
+                            <a href="javascript:void(0);" title="平板电脑">平板电脑</a>
+                            <a href="javascript:void(0);" title="台式机">台式机</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="javascript:void(0);">电脑整机</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">笔记本丨</a>
+                                <a href="javascript:void(0);">平板电脑丨</a>
+                                <a href="javascript:void(0);">台式机丨</a>
+                            </p>
+                            <div class="brands-class">
+                                <h5>品牌：</h5>
+                                <a href="javascript:void(0);">神舟丨</a>
+                                <a href="javascript:void(0);">方正丨</a>
+                                <a href="javascript:void(0);">索尼电脑丨</a>
+                                <a href="javascript:void(0);">联想电脑丨</a>
+                                <a href="javascript:void(0);">LG丨</a>
+                                <a href="javascript:void(0);">苹果电脑丨</a>
+                                <a href="javascript:void(0);">三星丨</a>
+                                <a href="javascript:void(0);">华硕丨</a>
+                                <a href="javascript:void(0);">ThinkPad丨</a>
+                                <a href="javascript:void(0);">DELL丨丨</a>
+                            </div>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="javascript:void(0);">外设配件</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">鼠标丨</a>
+                                <a href="javascript:void(0);">键盘丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-1232.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="javascript:void(0);">配件类</a></h4>
+                        <span class="recommend-class">
+                            <a href="javascript:void(0);" title="蓝牙耳机">蓝牙耳机</a>
+                            <a href="javascript:void(0);" title="充电器/移动电源">充电器/移动电源</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="javascript:void(0);">手机配件</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">蓝牙耳机丨</a>
+                                <a href="javascript:void(0);">充电器/移动电源丨</a>
+                                <a href="javascript:void(0);">数据线丨</a>
+                                <a href="javascript:void(0);">手机耳机丨</a>
+                                <a href="javascript:void(0);">存储卡丨</a>
+                                <a href="javascript:void(0);">蓝牙音箱丨</a>
+                                <a href="javascript:void(0);">耳机/耳麦丨</a>
+                            </p>
+                            <div class="brands-class">
+                                <h5>品牌：</h5>
+                                <a href="javascript:void(0);">优者丨</a>
+                                <a href="javascript:void(0);">赛谷丨</a>
+                                <a href="javascript:void(0);">E-BLUE/宜博丨</a>
+                                <a href="javascript:void(0);">巨能源丨</a>
+                                <a href="javascript:void(0);">IPEARL/爱贝尔丨</a>
+                                <a href="javascript:void(0);">咔哟丨</a>
+                                <a href="javascript:void(0);">Viken/维肯丨</a>
+                                <a href="javascript:void(0);">乔威/JOWAY丨</a>
+                                <a href="javascript:void(0);">QCY丨</a>
+                                <a href="javascript:void(0);">骏祺丨</a>
+                            </div>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="javascript:void(0);">电脑配件</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">移动硬盘丨</a>
+                                <a href="javascript:void(0);">U盘丨</a>
+                                <a href="javascript:void(0);">电脑音箱丨</a>
+                                <a href="javascript:void(0);">电脑包丨</a>
+                                <a href="javascript:void(0);">路由器丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-1230.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="javascript:void(0);">智能设备</a></h4>
+                        <span class="recommend-class">
+                            <a href="javascript:void(0);" title="智能手环">智能手环</a>
+                            <a href="javascript:void(0);" title="智能手表">智能手表</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="javascript:void(0);">智能穿戴</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">智能手环丨</a>
+                                <a href="javascript:void(0);">智能手表丨</a>
+                                <a href="javascript:void(0);">VR眼镜丨</a>
+                            </p>
+                            <div class="brands-class">
+                                <h5>品牌：</h5>
+                                <a href="javascript:void(0);">三星丨</a>
+                                <a href="javascript:void(0);">华为丨</a>
+                                <a href="javascript:void(0);">索尼丨</a>
+                                <a href="javascript:void(0);">埃微丨</a>
+                                <a href="javascript:void(0);">优者丨</a>
+                                <a href="javascript:void(0);">weloop丨</a>
+                                <a href="javascript:void(0);">Oviphone/欧孚丨</a>
+                            </div>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="javascript:void(0);">家居生活</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">生活日用丨</a>
+                                <a href="javascript:void(0);">厨房小电丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-1072.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="javascript:void(0);">运营商业务</a></h4>
+                        <span class="recommend-class">
+                            <a href="javascript:void(0);" title="合约机">合约机</a>
+                            <a href="javascript:void(0);" title="合约机">合约机</a>
+                            <a href="javascript:void(0);" title="合约机">合约机</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="javascript:void(0);">中国移动</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">合约机丨</a>
+                            </p>
+                            <h3 style="margin-top: 20px"><a href="javascript:void(0);">中国电信</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">合约机丨</a>
+                            </p>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="javascript:void(0);">中国联通</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">合约机丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-530.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="javascript:void(0);">客户服务</a></h4>
+                        <span class="recommend-class">
+                            <a href="javascript:void(0);" title="商品咨询">商品咨询</a>
+                            <a href="javascript:void(0);" title="快递服务">快递服务</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="javascript:void(0);">售前服务</a></h3>
+                            <p class="goods-class" style="margin-bottom: 20px;">
+                                <a href="javascript:void(0);">商品咨询丨</a>
+                                <a href="javascript:void(0);">快递服务丨</a>
+                                <a href="javascript:void(0);">付款咨询丨</a>
+                            </p>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="javascript:void(0);">售后服务</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">退换货申请丨</a>
+                                <a href="javascript:void(0);">修改收货地址丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav" style="border-bottom: 1px solid #29dcfc;">
+                    <span class="ico"></span>
+                    <div class="cat-txt-box">
+                        <h4><a href="javascript:void(0);">底价夺宝</a></h4>
+                        <span class="recommend-class">
+                            <a href="javascript:void(0);" title="移动">移动</a>
+                            <a href="javascript:void(0);" title="联通">联通</a>
+                            <a href="javascript:void(0);" title="电信">电信</a>
+                            <a href="javascript:void(0);" title="笔记本">笔记本</a>
+                          </span>
+                    </div>
+                    <div class="sub-class cl" style="top: -61px;">
+                        <div class="sub-class-left">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1353">电脑办公</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1360">笔记本丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1361">平板电脑丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1362">台式机丨</a>
+                            </p>
+                            <h3 style="margin-top: 15px;"><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1352">手机通讯</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1357">移动丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1358">联通丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1359">电信丨</a>
+                            </p>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="javascript:void(0);">配件</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">手机配件丨</a>
+                                <a href="javascript:void(0);">电脑配件丨</a>
+                            </p>
+                            <h3 style="margin-top: 15px;"><a href="javascript:void(0);">智能设备</a></h3>
+                            <p class="goods-class">
+                                <a href="javascript:void(0);">智能手环丨</a>
+                                <a href="javascript:void(0);">智能手表丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="site-menu">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="javascript:void(0);"> 底价夺宝</a></li>
+            <li><a href="javascript:void(0);"> 积分兑换</a></li>
+            <li><a href="javascript:void(0);">自提门店</a></li>
+            <li><a target="_blank" href="javascript:void(0);">以旧换新</a></li>
+            <li><a href="javascript:void(0);" class="cz"></a></li>
+        </ul>
+    </div>
+</div>
+<div class="nch-breadcrumb-layout">
+    <div class="nch-breadcrumb wrapper">
+        <i class="icon-home"></i>
+        <span><a href="javascript:void(0);">首页</a></span><span class="arrow">&gt;</span>
+        <span><a href="javascript:void(0);">手机通讯</a></span><span class="arrow">&gt;</span>
+        <span><a href="javascript:void(0);">智能手机</a></span><span class="arrow">&gt;</span>
+        <span><a href="javascript:void(0);">4G全网通</a></span><span class="arrow">&gt;</span>
+        <span>Apple iPhone 8 Plus  移动联通电信4G手机 金色 64GB</span>
+    </div>
+</div>
+<div id="content">
+    <div class="ncs-detail">
+        <!--<div class="ncs-goods-picture">-->
+            <!--<div id="small" class="small-pic">-->
+                <!--<img src="../images/3_05593085589881814_360.jpg" alt="" id="img">-->
+                <!--<div id="shadow" class="shadow"></div>-->
+            <!--</div>-->
+            <!--<ul class="small-pic-list">-->
+                <!--<li class="selected">-->
+                    <!--<img src="../images/3_05593085589881814_60.jpg" alt="" id="img1">-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<img src="../images/3_05593087198909676_60.jpg" alt="" id="img2">-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<img src="../images/3_05593087220031419_60.jpg" alt="" id="img3">-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<img src="../images/3_05593087236140045_60.jpg" alt="" id="img4">-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<img src="../images/3_05593087253194374_60.jpg" alt="" id="img5">-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <div id="big" class="big-pic">
+            <img src="../images/3_05593085589881814_360.jpg" alt="" id="bigImg">
+        </div>
+        <div class="ncs-goods-summary">
+            <div class="name">
+                <h2>&nbsp;</h2>
+                <strong>【iPhone新品上市】新一代iPhone，让智能看起来更不一样。</strong> </div>
+            <div class="ncs-meta">
+                <div class="rate"> <!-- S 描述相符评分 -->
+                    <a href="http://www.zhongyu.com/shop/index.php?act=goods&amp;op=index&amp;goods_id=102980#ncGoodsRate">商品评分</a>
+                    <div class="raty" data-score="5" title="很满意" style="width: 100px;"><img src="../images/star-on.png" alt="1" title="很满意">&nbsp;<img src="../images/star-on.png" alt="2" title="很满意">&nbsp;<img src="../images/star-on.png" alt="3" title="很满意">&nbsp;<img src="../images/star-on.png" alt="4" title="很满意">&nbsp;<img src="../images/star-on.png" alt="5" title="很满意"><input type="hidden" name="score" value="5" readonly="readonly"></div>
+                </div>
+
+                <dl>
+                    <dt>市&nbsp;场&nbsp;价：</dt>
+                    <dd class="cost-price"><strong>¥6688.00</strong></dd>
+                </dl>
+                <dl>
+                    <dt>商&nbsp;城&nbsp;价：</dt>
+                    <dd class="price">
+                        <strong>¥<span></span></strong>
+                    </dd>
+                </dl>
+            </div>
+            <div class="ncs-plus">
+                <!-- S 物流运费  预售商品不显示物流 -->
+                <dl class="ncs-freight">
+                    <dt>
+                        至　全国：
+                    </dt>
+                    <dd id="transport_price">
+                        <span id="nc_kd">卖家承担运费</span>
+                    </dd>
+                    <dd style="color:red;display:none" id="loading_price">loading.....</dd>
+                </dl>
+            </div>
+            <div class="ncs-key">
+                <!-- S 商品规格值-->
+                <dl nctype="nc-spec">
+                    <dt>颜色：</dt>
+                    <dd>
+                        <ul nctyle="ul_sign">
+                            <!-- 图片类型规格-->
+                            <li class="sp-img hovered"><a href="javascript:void(0);" data-param="{valid:740}" title="金色"><img src="../images/3_05593085589881814_60.jpg">金色<i></i></a></li>
+                            <!-- 图片类型规格-->
+                            <li class="sp-img"><a href="javascript:void(0);" class="" data-param="{valid:791}" title="银色"><img src="../images/3_05593085589881814_60.jpg">银色<i></i></a></li>
+                            <!-- 图片类型规格-->
+                            <li class="sp-img"><a href="javascript:void(0);" class="" data-param="{valid:792}" title="深空灰色"><img src="../images/3_05593085589881814_60.jpg">深空灰色<i></i></a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl nctype="nc-spec">
+                    <dt>版本：</dt>
+                    <dd>
+                        <ul nctyle="ul_sign">
+                            <!-- 文字类型规格-->
+                            <li class="sp-txt hovered"><a href="javascript:void(0)" data-param="{valid:758}">64GB<i></i></a></li>
+                            <!-- 文字类型规格-->
+                            <li class="sp-txt"><a href="javascript:void(0)" class="" data-param="{valid:932}">256GB<i></i></a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <!-- E 商品规格值-->
+                <!-- S 购买数量及库存 -->
+                <dl>
+                    <dt>购买数量：</dt>
+                    <dd class="ncs-figure-input">
+
+                        <input type="text" name="" id="quantity" value="1" size="3" maxlength="6" class="text w30">
+                        <a href="javascript:void(0)" class="increase">+</a><a href="javascript:void(0)" class="decrease">-</a>
+
+                          <span>( 有货
+                              <!-- 虚拟商品限购数 -->
+                        )</span>          </dd>
+                </dl>
+                <!-- E 购买数量及库存 -->
+            </div>
+            <div class="ncs-btn"><!-- S 提示已选规格及库存不足无法购买 -->
+                <div nctype="goods_prompt" class="ncs-point">
+                    <span class="yes">已选择 <strong>金色，64GB</strong></span>
+                </div>
+                <!-- E 提示已选规格及库存不足无法购买 -->
+                <!-- S到货通知 -->
+                <!-- E到货通知 -->
+                <div class="clear"></div>
+
+                <!-- 立即购买-->
+                <a href="login.html" nctype="buynow_submit" id="buynow" class="buynow " title="立即购买">立即购买</a>
+                <!-- 加入购物车-->
+                <a href="javascript:void(0);" nctype="addcart_submit" class="addcart " title="添加购物车" onclick="$('.ncs-cart-popup').css({'display':'block'});"><i class="icon-shopping-cart"></i>添加购物车</a>
+
+                <!-- S 加入购物车弹出提示框 -->
+                <div class="ncs-cart-popup">
+                    <dl>
+                        <dt>成功添加到购物车<a title="关闭" onclick="$('.ncs-cart-popup').css({'display':'none'});">X</a></dt>
+                        <dd>购物车共有 <strong id="bold_num">1</strong> 种商品 总金额为：<em id="bold_mly" class="saleP">¥6688.00</em></dd>
+                        <dd class="btns">
+                            <a href="javascript:void(0);" id="see_cart" class="ncs-btn-green" onclick="location.href='login.html'">查看购物车</a>
+                            <a href="javascript:void(0);" class="ncs-btn-mini" value="" onclick="$('.ncs-cart-popup').css({'display':'none'});">继续购物</a>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- E 加入购物车弹出提示框 -->
+
+            </div>
+            <div class="ncs-handle">
+                <img src="../images/ncs-handle.png" alt="">
+            </div>
+            <div class="ncs-info">
+                <img src="../images/ncs-info.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="goods-pic">
+        <img src="../images/goods-pic1.png" alt="">
+        <img src="../images/goods-pic2.png" alt="" style="margin-left: 2px">
+    </div>
+</div>
+<div id="faq">
+    <div class="faq-wrapper cl">
+        <ul>
+            <li> <dl class="s1">
+                <dt>
+                    购物指南      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="会员介绍"> 会员介绍 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="常见问题"> 常见问题 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="联系客服"> 联系客服 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="购物流程"> 购物流程 </a></dd>
+            </dl></li>
+            <li> <dl class="s2">
+                <dt>
+                    配送方式      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="门店自提"> 门店自提 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="配送服务查询"> 配送服务查询 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="发货和签收"> 发货和签收 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="配送费收取标准"> 配送费收取标准 </a></dd>
+            </dl></li>
+            <li> <dl class="s3">
+                <dt>
+                    支付方式      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="货到付款"> 货到付款 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="邮局汇款"> 邮局汇款 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="公司转账"> 公司转账 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="分期付款"> 分期付款 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="在线支付"> 在线支付 </a></dd>
+            </dl></li>
+            <li> <dl class="s4">
+                <dt>
+                    售后服务      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="退换货政策"> 退换货政策 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="退换货流程"> 退换货流程 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="返修/退换货"> 返修/退换货 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="退款申请"> 退款申请 </a></dd>
+            </dl></li>
+            <li> <dl class="s5">
+                <dt>
+                    客服中心      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="会员修改密码"> 会员修改密码 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="会员修改个人资料"> 会员修改个人资料 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="账户安全"> 账户安全 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="修改收货地址"> 修改收货地址 </a></dd>
+            </dl></li>
+            <li> <dl class="s6">
+                <dt>
+                    关于我们      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="中域官网"> 中域官网 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="合作及洽谈"> 合作及洽谈 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="招聘英才"> 招聘英才 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="关于我们"> 关于我们 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="联系我们"> 联系我们 </a></dd>
+            </dl></li>
+        </ul>
+
+        <div class="help">
+            <div class="w1190 clearfix cl">
+                <div class="contact f-l">
+                    <div class="contact-border clearfix">
+                        <span class="ic tel t20">4006780666</span>
+                        <span class="ic mail">web1@zhongyu.com</span>
+                        <div class="attention cleafix">
+                            <div class="weixin f-l">
+                                <img src="../images/04871787573066174.png" class="f-l jImg img-error">
+                                <p class="f-l">
+                                    <span>扫一扫</span>
+                                    <span>关注我们</span>
+                                </p>
+                            </div>
+                            <div class="weibo f-l">
+                                <div class="ic qq">
+                                    <ul>
+                                        <li><a href="" target="_blank">新浪微博</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ic sina" >
+                                    <ul>
+                                        <li><a href="" target="_blank">腾讯微博</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer" class="wrapper" style="min-width: 1200px">
+    <p>
+        <a href="javascript:void(0);">首页</a>
+        | <a href="javascript:void(0);">招聘英才</a>
+        | <a href="javascript:void(0);">合作及洽谈</a>
+        | <a href="javascript:void(0);">联系我们</a>
+        | <a href="javascript:void(0);">关于我们</a>
+        | <a href="javascript:void(0);">友情链接</a>
+    </p>
+    Copyright 2017 <a href="../index.html" target="_blank">zhongyu.com</a> All rights reserved. 粤ICP备05093699号-1 粤ICP备09019533号<br>
+</div>
+<script src="../js/ajax.js"></script>
+<script src="../js/jquery-1.11.3.js"></script>
+<script>
+    var cookies = document.cookie;
+    var user_name = "";
+    if (cookies) {
+        var list = cookies.split(";");
+//        ["id_goods_3=goods_3", " username_yyyyyy=yyyyyy", " id_goods_2=goods_2"]
+        for (var i = 0; i < list.length; i++) {
+            var item = list[i].split("=");
+            var key = item[0].trim();
+            var value = item[1].trim();
+            if (key.indexOf("username_") != -1) {
+                $("#shopping-cart").attr("href","shoppingCart.html");
+                $("#buynow").attr("href","address.html");
+                $("#see_cart").attr("onclick","location.href='shoppingCart.html'")
+                user_name = value;
+                $("#user_name").text(user_name).attr("href","javascript:void(0)");
+
+                $("#exit").text("退出").css("color","red").attr("href","javascript:void(0);").click(function () {
+                    setCookie("username_" + user_nameInput.value, user_nameInput.value, 0);
+                });
+            }
+        }
+    }
+    var search=window.location.search;
+    var goodsid = search.split("=")[1];
+    if(search){
+        $.ajax({
+            type: "get",
+            url: "http://qxu2149950238.my3w.com/zhongyu/findId.php",
+            data: {id: goodsid},
+            success: function (result) {
+                var item = JSON.parse(result);
+
+                var imageSrc = item.imageSrc;
+                var goodsName = item.goodsName;
+                var goodsPrice = item.goodsPrice;
+
+                $(".name").find("h2").html(goodsName);
+                $(".price").find("span").html(goodsPrice);
+                var str = "";
+                str += `
+                <div class="ncs-goods-picture">
+            <div id="small" class="small-pic">
+                <img src="${imageSrc}" alt="" id="img">
+                <div id="shadow" class="shadow"></div>
+            </div>
+            <ul class="small-pic-list">
+                <li class="selected">
+                    <img src="${imageSrc}" alt="" id="img1">
+                </li>
+                <li>
+                    <img src="../images/3_05593087198909676_60.jpg" alt="" id="img2">
+                </li>
+                <li>
+                    <img src="../images/3_05593087220031419_60.jpg" alt="" id="img3">
+                </li>
+                <li>
+                    <img src="../images/3_05593087236140045_60.jpg" alt="" id="img4">
+                </li>
+                <li>
+                    <img src="../images/3_05593087253194374_60.jpg" alt="" id="img5">
+                </li>
+            </ul>
+        </div>
+        `
+                $(".ncs-detail").append(str);
+
+                var img1 = document.querySelector("#img1");
+                var img2 = document.querySelector("#img2");
+                var img3 = document.querySelector("#img3");
+                var img4 = document.querySelector("#img4");
+                var img5 = document.querySelector("#img5");
+                var img = document.querySelector("#img");
+                var bigImg = document.querySelector("#bigImg");
+                var small = document.getElementById("small");
+                var shadow = document.querySelector("#shadow");
+                var content = document.querySelector("#content");
+                var big = document.querySelector("#big");
+                img1.onmouseover = function () {
+                    img.src = imageSrc;
+                    bigImg.src = imageSrc;
+                }
+                img2.onmouseover = function () {
+                    img.src = "../images/3_05593087198909676_360.jpg";
+                    bigImg.src = "../images/3_05593087198909676_1280.jpg";
+                }
+                img3.onmouseover = function () {
+                    img.src = "../images/3_05593087220031419_360.jpg";
+                    bigImg.src = "../images/3_05593087220031419_360.jpg";
+                }
+                img4.onmouseover = function () {
+                    img.src = "../images/3_05593087236140045_360.jpg";
+                    bigImg.src = "../images/3_05593087236140045_360.jpg";
+                }
+                img5.onmouseover = function () {
+                    img.src = "../images/3_05593087253194374_360.jpg";
+                    bigImg.src = "../images/3_05593087253194374_360.jpg";
+                }
+
+                var photoLeft = parseInt(getStyle(content,"marginLeft")) + 20;
+                var photoTop = 228 + 20;
+                var smallWidth = parseFloat(getStyle(small,"width"));
+                var smallHeight = parseFloat(getStyle(small,"height"));
+
+                small.onmousemove = function (e) {
+                    shadow.style.display = "block";
+                    big.style.display = "block";
+                    var evt = window.event || e;
+                    var pageX = evt.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
+                    var pageY = evt.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
+
+                    var shadowWidth = parseInt(getStyle(shadow,"width"));
+                    var shadowHeight = parseInt(getStyle(shadow,"height"));
+
+                    var x = pageX - photoLeft - (shadowWidth / 2);
+                    var y = pageY - photoTop - (shadowHeight / 2);
+
+                    var maxX = smallWidth - shadowWidth + 20;
+                    var maxY = smallHeight - shadowHeight + 20;
+
+                    if(x < 20){
+                        x = 20;
+                    }
+                    if(x > maxX){
+                        x = maxX;
+                    }
+                    if(y < 20){
+                        y = 20;
+                    }
+                    if(y > maxY){
+                        y = maxY;
+                    }
+
+                    shadow.style.left = x + "px";
+                    shadow.style.top = y + "px";
+
+
+                    bigX = 2 * x;
+                    bigY = 2* y;
+                    //disX = pageX - photoLeft;
+                    //disY = pageY - photoTop;
+                    bigImg.style.left = -bigX + 20 + "px";
+                    bigImg.style.top = -bigY + 20 + "px";
+
+                }
+                small.onmouseout = function () {
+                    big.style.display = "none";
+                    shadow.style.display = "none";
+                }
+                $(".small-pic-list li").hover(function () {
+                    index = $(this).index();
+                    $(".small-pic-list li").eq(index).addClass("selected").siblings().removeClass("selected");
+                });
+
+            }
+        })
+    }
+    
+    $(".addcart ").click(function () {
+        setCookie("id_" + goodsid, goodsid, 7);
+        var cookies = document.cookie;
+        var goodIdList = [];
+        if (cookies) {
+            // "id_goodsid_1=goodsid_1;id_goodsid_2=goodsid_2"
+            var list = cookies.split(";");
+            for (var i = 0; i < list.length; i++) {
+                var item = list[i].split("=");
+                var key = item[0].trim();
+                var value = item[1].trim();
+                if (key.indexOf("id_") != -1) {
+                    goodIdList.push(value);
+                }
+            }
+        }
+        var totalNum = goodIdList.length;
+        $("#bold_num").text(totalNum);
+    });
+    $(".increase").click(function () {
+        var num = $("#quantity").val()*1 + 1;
+        $("#quantity").val(num);
+    });
+    $(".decrease").click(function () {
+        var num = $("#quantity").val()*1 - 1;
+        if(num <= 0){
+            num = 0;
+        }
+        $("#quantity").val(num);
+    })
+
+
+
+    function getStyle(obj,attr){
+        if(window.getComputedStyle){
+            return window.getComputedStyle(obj)[attr];
+        }else{
+            return obj.currentStyle[attr];
+        }
+    }
+    function setCookie(key,value,day){
+        var date = new Date();
+        date.setDate(date.getDate() + day);
+        document.cookie = key + "=" + value + ";expires=" + date;
+    }
+</script>
+</body>
+</html>

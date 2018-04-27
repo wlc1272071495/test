@@ -1,0 +1,34 @@
+{
+  "proList":[
+    {
+      "id":"1",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2988.00",
+      "imageSrc":"../images/3_05593085589881814_60.jpg"
+    },
+    {
+      "id":"2",
+      "proName":"Apple iPhone 8 Plus  移动联通电信4G手机 深空灰色 256GB",
+      "proPrice":"4988.00",
+      "imageSrc":"../images/pro6.jpg"
+    },
+    {
+      "id":"3",
+      "proName":"Apple iPhone 8 Plus  移动联通电信4G手机 深空灰色 256GB",
+      "proPrice":"3988.00",
+      "imageSrc":"../images/pro1.jpg"
+    },
+    {
+      "id":"4",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2433.00",
+      "imageSrc":"../images/pro2.jpg"
+    },
+    {
+      "id":"5",
+      "proName":"Apple iPhone 8 Plus  移动联通电信4G手机 深空灰色 256GB",
+      "proPrice":"7988.00",
+      "imageSrc":"../images/3_05593085589881814_60.jpg"
+    }
+    ]
+}

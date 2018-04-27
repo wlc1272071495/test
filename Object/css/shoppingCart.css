@@ -1,0 +1,630 @@
+.cl:after {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden; }
+.hr {
+    font-size: 1px;
+    display: block;
+    height: 0;
+    margin: 12px 0;
+    border-top: 1px solid #E3E3E3;
+    overflow: hidden;
+}
+
+.public-top {
+    width: 100%;
+    height: 30px;
+    background-color: #fafafa;
+    color: #777777;
+    font-family: Arial, 瀹嬩綋;
+    line-height: 20px; }
+.public-top .topbar {
+    width: 1200px;
+    height: 30px;
+    margin: auto; }
+.public-top .topbar .user-entry {
+    width: 45%;
+    height: 20px;
+    float: left;
+    padding: 5px 0;
+    font-size: 12px; }
+.public-top .topbar .user-entry a {
+    color: #333333; }
+.public-top .topbar .user-entry a:hover {
+    text-decoration: underline; }
+.public-top .topbar .quick-menu {
+    width: 55%;
+    height: 30px;
+    float: right; }
+.public-top .topbar .quick-menu ul {
+    width: 100%;
+    height: 30px; }
+.public-top .topbar .quick-menu ul li {
+    float: left;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center; }
+.public-top .topbar .quick-menu ul li a {
+    color: #777777; }
+.public-top .topbar .quick-menu ul li i {
+    background: url(../images/top_bg.png) no-repeat 0 0;
+    vertical-align: middle;
+    display: inline-block;
+    width: 6px;
+    height: 3px;
+    margin-left: 6px;
+    transition: .4s; }
+.public-top .topbar .quick-menu ul li:hover i {
+    transform: rotate(180deg); }
+.public-top .topbar .quick-menu ul .serve {
+    width: 80px;
+    position: relative; }
+.public-top .topbar .quick-menu ul .serve ul {
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    top: 30px;
+    height: auto;
+    background-color: #fff;
+    display: none; }
+.public-top .topbar .quick-menu ul .serve ul li:hover {
+    background-color: #fafafa; }
+.public-top .topbar .quick-menu ul .serve:hover ul {
+    display: block; }
+.public-top .topbar .quick-menu ul .serve:hover {
+    background-color: #fff; }
+.public-top .topbar .quick-menu ul .wechat {
+    width: 90px;
+    background: url(../images/weixin.png) no-repeat 0 8px;
+    padding-left: 5px;
+    position: relative; }
+.public-top .topbar .quick-menu ul .wechat .weixin {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    z-index: 9999;
+    display: none;
+    background-color: #FFF; }
+.public-top .topbar .quick-menu ul .wechat .weixin h4 {
+    line-height: 18px;
+    color: #F98016;
+    text-align: center;
+    margin: 10px 0 5px 0;
+    font-size: 12px; }
+.public-top .topbar .quick-menu ul .wechat:hover .weixin {
+    display: block; }
+.public-top .topbar .quick-menu ul .wechat:hover {
+    background-color: #fff; }
+/* 购物车头部内容
+------------------------------------*/
+.ncc-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+.ncc-head-layout {
+    display: block;
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-bottom: 1px solid #DDDDDD;
+}
+.ncc-head-layout .site-logo {
+    float: left;
+    width: 240px;
+    height: 60px;
+    margin: 20px 0;
+}
+.ncc-head-layout .site-logo a {
+    display: block;
+}
+.ncc-head-layout .site-logo img {
+    max-width: 240px;
+    max-height: 60px;
+}
+
+.ncc-flow {
+    font-size: 0;
+    *word-spacing:-1px/*IE6、7*/;
+    width: 640px;
+    height: 70px;
+    float: right;
+    margin: 15px 0;
+}
+.ncc-flow li {
+    font-size: 12px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    width: 25%;
+    height: 70px;
+    position: relative;
+    z-index: 1;
+}
+.ncc-flow li {
+    *display: inline/*IE6,7*/;
+}
+.ncc-flow li i {
+    background: #FFF url(../images/buy_step.gif) no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+}
+.ncc-flow li i.step1 {
+    background-position: 0 0;
+}
+.ncc-flow li i.step2 {
+    background-position: -30px 0;
+}
+.ncc-flow li i.step3 {
+    background-position: -60px 0;
+}
+.ncc-flow li i.step4 {
+    background-position: -90px 0;
+}
+.ncc-flow li p {
+    font-size: 14px/24px arial,"microsoft yahei";
+    color: #CCC;
+    text-align: center;
+    width: 100%;
+    height: 24px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.ncc-flow li sub {
+    background-color: #FFF;
+    width: 5px;
+    height: 5px;
+    margin-left: -3px;
+    border: solid 1px #CCC;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 2;
+    top: 38px;
+    left: 50%;
+}
+.ncc-flow li .hr {
+    *line-height: 1px;
+    background-color: #DDD;
+    width: 100%;
+    height: 1px;
+    border: none 0;
+    position: absolute;
+    z-index: 1;
+    top: 29px;
+    left: 0;
+}
+.ncc-flow li.current i.step1 {
+    background-position: 0 -30px;
+}
+.ncc-flow li.current i.step2 {
+    background-position: -30px -30px;
+}
+.ncc-flow li.current i.step3 {
+    background-position: -60px -30px;
+
+}
+.ncc-flow li.current i.step4 {
+    background-position: -90px -30px;
+}
+.ncc-flow li.current p {
+    color: #27A9E3;
+}
+.ncc-flow li.current sub {
+    background-color: #27A9E3;
+    border-color: #27A9E3;
+    box-shadow: 0 0 0 2px rgba(0,153,204,0.15);}
+.ncc-flow li.current .hr {
+    background-color: #27A9E3;
+}
+
+.ncc-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.ncc-wrapper .ncc-title {
+    height: 50px;
+    padding: 15px 0;
+    border: solid #F7F7F7;
+    border-width: 1px 0 0;
+}
+.ncc-wrapper .ncc-title h3 {
+    font: lighter 24px/30px arial,"microsoft yahei";
+    color: #555;
+}
+.ncc-wrapper .ncc-title h5 {
+    font: 12px/20px arial,"microsoft yahei";
+    color: #AAA;
+}
+.ncc-table-style {
+    width: 100%;
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 2px 1px;
+    border-color: #AAA #DDD;
+}
+.ncc-table-style thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.ncc-table-style thead th {
+    line-height: 20px;
+    color: #666;
+    background-color: #F9F9F9;
+    text-align: center;
+    height: 20px;
+    padding: 8px 0;
+    border-bottom: solid 1px #DDD;
+    font-size: 12px;
+}
+.w50 {
+    width: 50px !important;
+}
+.w120 {
+    width: 120px !important;
+}
+.w80 {
+    width: 80px !important;
+}
+
+.ncc-table-style tbody tr{
+    font-size: 12px;
+}
+.ncc-table-style tbody th {
+    line-height: 20px;
+    color: #333;
+    height: 20px;
+    background-color: #DAF0FE;
+    padding: 8px;
+    border-bottom: solid 1px #DDD;
+    text-align: left;
+}
+.ncc-table-style tbody th a{
+    color: #333;
+}
+.ncc-table-style a:hover {
+    color: #C00;
+}
+.ncc-table-style tbody th .store-sale {
+    font-size: 12px;
+    display: inline-block;
+    float: right;
+}
+.ncc-table-style tbody th .store-sale em {
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFF;
+    background-color: #090;
+    vertical-align: middle;
+    display: inline-block;
+    height: 14px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+.ncc-table-style tbody tr.shop-list td {
+    background-color: #FFFDEE;
+}
+.ncc-table-style tbody tr td {
+    padding: 8px 0;
+    text-align: center;
+    border-bottom: solid 1px #DDD;
+}
+.ncc-table-style .ncc-goods-thumb {
+    line-height: 0;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.ncc-table-style .ncc-goods-thumb img {
+    max-width: 40px;
+    max-height: 40px;
+}
+.tl {
+    text-align: left !important;
+}
+.tl a{
+    color: #333;
+}
+.tl a:hover{
+    color: #C00;
+}
+.ncc-table-style a.add-substract-key {
+    font: 14px/14px Arial;
+    color: #777;
+    text-decoration: none;
+    background-color: #F5F5F5;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 4px;
+    border: solid 1px;
+    border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC;
+    cursor: pointer;
+}
+.ncc-table-style a.add-substract-key:hover{
+    color: #FFF;
+    background-color: #49AFCD;
+    border-color: #429DB8 #429DB8 #37839A #429DB8;
+    text-decoration: none;
+}
+input[type="text"], input[type="password"], input.text, input.password {
+    font: 12px/20px Tahoma;
+    color: #777;
+    background-color: #FFF;
+    vertical-align: middle;
+    display: inline-block;
+    height: 20px;
+    padding: 2px 4px;
+    border: solid 1px #CCC;
+    outline: 0 none;
+}
+.w20 {
+    width: 20px;
+}
+.w80 a{
+    color: #333;
+}
+.w80 a:hover{
+    color: #C00;
+}
+.tr {
+    text-align: right !important;
+}
+.ncc-table-style tfoot td {
+    background: #F9F9F9;
+    text-align: right;
+    height: 30px;
+    padding: 10px 0;
+    color: #666;
+}
+.ncc-all-account {
+    font: normal 16px/32px "microsoft yahei", Arial;
+    margin-right: 20px;
+}
+.ncc-all-account em {
+    font-size: 22px;
+    color: #D93600;
+    margin: 0 5px;
+}
+.ncc-bottom {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+}
+a.ncc-btn-acidblue {
+    background-color: #49AFCD;
+    border-color: #429DB8 #429DB8 #37839A #429DB8;
+    color: #FFF !important;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.10);
+}
+a.ncc-btn {
+    font: normal 14px/20px arial,"microsoft yahei";
+    text-align: center;
+    display: inline-block;
+    height: 20px;
+    padding: 8px 16px;
+    border: solid 1px;
+    cursor: pointer;
+    float: right;
+}
+a.ncc-btn:hover{
+    text-decoration: none;
+    background-color: #2F96B4;
+    border-color: #2A87A2 #2A87A2 #237087 #2A87A2;
+}
+.goods-guess-like {
+    border: solid 1px #EEE;
+    margin: 0 auto 20px auto;
+}
+.goods-guess-like .title {
+    font: bold 14px/20px "microsoft yahei";
+    color: #666;
+    padding: 8px 19px;
+    border-bottom: solid 1px #EEE;
+}
+.noguess {
+    color: #AAA;
+    text-align: center;
+    padding: 50px 0;
+}
+#footer {
+    font-size: 12px !important;
+    border-top: 1px solid #e7e7e7;
+    text-align: center;
+    color: #666;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 90px;
+    overflow: hidden;
+    background: #F5F5F5;
+    width: 100%; }
+#footer p {
+    color: #666;
+    word-spacing: 5px;
+    padding: 10px 0; }
+#footer a {
+    text-decoration: none;
+    color: #666; }
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/*结算页面样式*/
+.ncc-title h3 {
+    font: lighter 24px/30px arial,"microsoft yahei";
+    color: #555;
+}
+.ncc-title h5 {
+    font: 12px/20px arial,"microsoft yahei";
+    color: #AAA;
+}
+.ncc-wrapper .ncc-receipt-info {
+    color: #534535;
+    background: rgba(255,245,204,0.25);
+    padding: 7px 17px;
+    height: 350px;
+    border: solid 3px #D93600;
+}
+.ncc-receipt-info-title {
+    display: block;
+    height: 22px;
+    padding: 4px 0;
+}
+.ncc-receipt-info-title h3{
+    font: 16px/20px arial,"microsoft yahei";
+    color: #333;
+    vertical-align: middle;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+}
+.ncc-candidate-items li {
+    line-height: 20px;
+    display: block;
+    min-height: 20px;
+    padding: 5px 0 6px 0;
+    margin-top: -1px;
+    border-top: dotted 1px #E6E6E6;
+}
+.ncc-candidate-items input[type="radio"], .ncc-candidate-items .radio {
+    margin: 0 5px;
+}
+.ncc-candidate-items label {
+    line-height: 20px;
+    display: inline-block;
+}
+.ncc-candidate-items .del {
+    color: #D93600;
+    font-size: 12px;
+}
+.ncc-form-default dl {
+    font-size: 0px;
+    line-height: 20px;
+    clear: both;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.ncc-form-default dl dt {
+    font-size: 12px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: right;
+    display: inline-block;
+    width: 15%;
+    padding: 10px 1% 10px 0;
+    margin: 0;
+}
+.ncc-form-default dl dt i.required {
+    font: 12px/16px Tahoma;
+    color: #F30;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.ncc-form-default dl dd {
+    font-size: 12px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    width: 84%;
+    padding: 10px 0 10px 0;
+}
+.w100 {
+    width: 100px !important;
+}
+.w500 {
+    width: 500px;
+}
+.ncc-candidate-items p {
+    color: #888;
+}
+.w200 {
+    width: 200px !important;
+}
+.ncc-candidate-items input[type="radio"], .ncc-candidate-items .radio, .ncc-candidate-items label, .ncc-candidate-items a {
+    font-size: 12px;
+    vertical-align: middle;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+}
+a.ncc-btn-red {
+    background-color: #DA4F49;
+    border-color: #C44742 #C44742 #A33B37 #C44742;
+}
+.ncc-candidate-items a {
+    zoom: 1;
+}
+.hr16 {
+    margin: 16px 0 !important;
+}
+a.ncc-btn {
+    font: normal 14px/20px arial,"microsoft yahei";
+    text-align: center;
+    display: inline-block;
+    height: 20px;
+    padding: 8px 16px;
+    border: solid 1px;
+    cursor: pointer;
+    float: left;
+}
+.ncc-receipt-info-title {
+    display: block;
+    height: 22px;
+    padding: 4px 0;
+}
+.ncc-msg-textarea {
+    vertical-align: top;
+    height: 20px;
+    resize: none;
+    width: 400px;
+}
+textarea, .textarea {
+    font: 12px/20px Tahoma;
+    color: #777;
+    background-color: #FFF;
+    display: inline-block;
+    padding: 2px 4px;
+    border: solid 1px #CCC;
+    outline: 0 none;
+}
+.tr {
+    text-align: right !important;
+}
+.ncc-store-account dl dt {
+    color: #333;
+    width: 300px;
+}
+.ncc-store-account dl dd em {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+#submitOrder{
+    float: right;
+}

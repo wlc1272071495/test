@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中域商城 - 用户注册</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/register.css" type="text/css">
+</head>
+<body>
+<div class="header-wrap">
+    <h1 class="site-logo">
+        <a href="../index.html">
+            <img src="../images/04833010951413373.png" class="pngFix">
+        </a>
+    </h1>
+</div>
+<div class="nc-login-layout cl">
+    <div class="nc-login-left">
+        <h3>注册之后您可以</h3>
+        <ul>
+            <li class="ico05"><i></i>购买商品支付订单</li>
+            <li class="ico01"><i></i>申请开店销售商品</li>
+            <li class="ico03"><i></i>空间好友推送分享</li>
+            <li class="ico02"><i></i>收藏商品关注店铺</li>
+            <li class="ico06"><i></i>商品咨询服务评价</li>
+            <li class="ico04"><i></i>安全交易诚信无忧</li>
+            <div class="clear"></div>
+        </ul>
+        <h3 class="mt20">如果您是本站用户</h3>
+        <div class="nc-login-now mt10">
+            <span class="ml20">我已经注册过账号，立即<a href="login.html" title="" class="register">登录</a></span>
+            <span>或是<a class="forget" href="http://www.zhongyu.com/shop/index.php?act=login&amp;op=forget_password">找回密码？</a></span>
+        </div>
+    </div>
+    <div class="nc-login">
+        <div class="nc-login-title">
+            <h3>用户注册</h3>
+        </div>
+        <ul class="nc-login-content">
+            <li>
+                <span>用户名</span>
+                <input type="text" id="user_name" name="user_name" class="text tip" title="不能以数字开头，6-15位字符，可由中文、英文、数字及“_”、“-”组成" autofocus="">
+                <div class="error" id="error1" style="display: none">用户名格式不正确</div>
+            </li>
+            <li>
+                <span>设置密码</span>
+                <input type="password" id="pwd1" title="6-20位字符，可由英文、数字及标点符号组成">
+                <div class="error" id="error2"  style="display: none">密码长度应在6-20个字符之间</div>
+            </li>
+            <li>
+                <span>确认密码</span>
+                <input type="password" id="pwd2" title="请再次输入您的密码">
+                <div class="error" id="error3"  style="display: none">两次输入的密码不一致</div>
+            </li>
+            <li>
+                <span>手机号</span>
+                <input type="text" id="tel" title="请输入11位数字手机号">
+                <button id="btn">发送验证码</button>
+                <div class="error"  id="error4"  style="display: none">请输入正确的手机号</div>
+            </li>
+            <li>
+                <span>验证码</span>
+                <input type="text" id="captcha">
+                <div class="error"  id="error5"  style="display: none">验证码不正确</div>
+            </li>
+        </ul>
+        <div class="nc-login-bottom">
+            <button id="Submit" class="submit" title="立即注册">立即注册</button>
+
+            <input name="agree" type="checkbox" class="vm ml10" id="clause" value="1" checked="checked">
+            <span for="clause" class="ml5">阅读并同意<a href="http://www.zhongyu.com/shop/index.php?act=document&amp;op=index&amp;code=agreement" title="阅读并同意">服务协议</a></span>
+        </div>
+        <div class="shadow"></div>
+    </div>
+</div>
+<div id="footer" class="wrapper" style="min-width: 1200px">
+    <p>
+        <a href="http://www.zhongyu.com/shop">首页</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=article&amp;article_id=24">招聘英才</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=article&amp;article_id=25">合作及洽谈</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=article&amp;article_id=23">联系我们</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=article&amp;article_id=22">关于我们</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=link">友情链接</a>
+    </p>
+    Copyright 2017 <a href="http://www.zhongyu.com/" target="_blank">zhongyu.com</a> All rights reserved. 粤ICP备05093699号-1 粤ICP备09019533号<br>
+</div>
+</body>
+<script src="../js/ajax.js"></script>
+<script>
+    var user_nameInput = document.querySelector("#user_name");
+    var pwd1Input = document.querySelector("#pwd1");
+    var pwd2Input = document.querySelector("#pwd2");
+    var telInput = document.querySelector("#tel");
+
+    var error1 = document.querySelector("#error1");
+    var error2 = document.querySelector("#error2");
+    var error3 = document.querySelector("#error3");
+    var error4 = document.querySelector("#error4");
+    var error5 = document.querySelector("#error5");
+
+    var codeInput = document.querySelector("#captcha");
+    var btn = document.querySelector("#btn");
+    var Submit = document.querySelector("#Submit");
+
+    user_nameInput.onblur = function () {
+        var userName = user_nameInput.value;
+        if(userName != ""){
+            var regAccount = /^[a-zA-Z_$]{1}[a-zA-Z0-9_$]{5,9}$/;
+            if (regAccount.test(userName)){
+                error1.style.display = "block";
+                error1.innerHTML = "用户名合法√";
+                error1.style.color = "green";
+                Submit.disabled = false;
+                $.ajax({
+                    type: "get",
+                    url: "http://qxu2149950238.my3w.com/zhongyu/userNameIsExist_.php",
+                    data: {username: user_nameInput.value},
+                    success: function (result) {
+                        var item = JSON.parse(result);
+                        if (item.code) {
+                            error1.style.display = "block";
+                            error1.innerHTML = "该用户名已存在";
+                            Submit.disabled = true;
+                            error1.style.color = "red";
+                        } else {
+                            Submit.disabled = false;
+                        }
+                    }
+                });
+            }else{
+                Submit.disabled = true;
+                error1.style.display = "block";
+                error1.innerHTML = "用户名格式不正确";
+                error1.style.color = "red";
+            }
+        }else{
+            Submit.disabled = true;
+        }
+    }
+    pwd1Input.onblur = function () {
+        var pwd1 = pwd1Input.value;
+        if(pwd1 != ""){
+            var regPassword = /[a-zA-Z0-9]{6,20}$/;
+            if(regPassword.test(pwd1)){
+                error2.style.display = "block";
+                error2.innerHTML = "密码格式正确√";
+                error2.style.color = "green";
+                Submit.disabled = false;
+            }else{
+                Submit.disabled = "disabled";
+                error2.style.display = "block";
+                error2.innerHTML = "密码长度应在6-20个字符之间";
+                error2.style.color = "red";
+            }
+        }else{
+            Submit.disabled = "disabled";
+        }
+    }
+    pwd2Input.onblur = function () {
+        var pwd1 = pwd1Input.value;
+        var pwd2 = pwd2Input.value;
+        if(pwd2 != ""){
+            if(pwd1 != "" && pwd1 == pwd2){
+                error3.style.display = "block";
+                error3.innerHTML = "密码一致√";
+                error3.style.color = "green";
+                Submit.disabled = false;
+            }else{
+                Submit.disabled = "disabled";
+                error3.style.display = "block";
+                error3.innerHTML = "两次输入的密码不一致";
+                error3.style.color = "red";
+            }
+        }else{
+            Submit.disabled = "disabled";
+        }
+    }
+    telInput.onblur = function () {
+        var tel = telInput.value;
+        if(tel != ""){
+            var regTel = /^1[3|4|5|7|8]{1}[0-9]{9}$/;
+            if(regTel.test(tel)){
+                error4.style.display = "block";
+                error4.innerHTML = "手机号格式正确√";
+                error4.style.color = "green";
+                Submit.disabled = false;
+                $.ajax({
+                    type: "get",
+                    url: "http://qxu2149950238.my3w.com/zhongyu/telIsExist_.php",
+                    data: {tel: telInput.value},
+                    success: function (result) {
+                        var item = JSON.parse(result);
+                        if (item.code) {
+                            error4.style.display = "block";
+                            error4.innerHTML = "该手机号已注册";
+                            Submit.disabled = true;
+                            error4.style.color = "red";
+                        } else {
+                            Submit.disabled = false;
+                        }
+                    }
+                });
+            }else{
+                Submit.disabled = true;
+                error4.style.display = "block";
+                error4.innerHTML = "请输入正确的手机号";
+                error4.style.color = "red";
+            }
+        }else {
+            Submit.disabled = true;
+        }
+    }
+
+    btn.onclick = function () {
+        $.ajax({
+            type: "get",
+            url: "http://qxu2149950238.my3w.com/zhongyu/phpApiDemo/apiDemo/b.php",
+            data: {tel: telInput.value},
+            success: function (result) {
+                var item = JSON.parse(result);
+                if (item.code == 1) {
+                    btn.innerHTML = "发送成功";
+                    btn.disabled = true;
+                } else {
+                    error5.style.display = "block";
+                    error5.innerHTML = "验证码发送失败";
+                }
+            }
+        });
+    }
+    Submit.onclick = function () {
+        $.ajax({
+            type: "get",
+            url: "http://qxu2149950238.my3w.com/zhongyu/loginByTel.php",
+            data: {tel: telInput.value, code: codeInput.value},
+            success: function (result) {
+                var item = JSON.parse(result);
+                if (item.code == "1") {
+                    alert("注册成功");
+                    window.location.href = "login.html";
+                } else {
+                    error5.style.display = "block";
+
+                }
+            }
+        });
+        $.ajax({
+            type: "get",
+            url: "http://qxu2149950238.my3w.com/zhongyu/create.php",
+            data: {username: user_nameInput.value, pwd: pwd1Input.value, tel: telInput.value},
+            success: function (result) {
+                var obj = JSON.parse(result);
+                if (obj.code) {
+//                    window.location.href = "login.html";
+                }
+            }
+
+        });
+    }
+
+
+</script>
+</html>

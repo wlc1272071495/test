@@ -1,0 +1,246 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, div, li, dl, dt, dd {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-family: "microsoft yahei"; }
+
+.cl:after {
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  visibility: hidden; }
+
+ul, ol {
+  list-style: none; }
+
+fieldset, img {
+  border: medium none;
+  vertical-align: middle; }
+
+.header-wrap {
+  background-color: #FFF;
+  width: 100%; }
+  .header-wrap .site-logo {
+    margin-left: 132px;
+    margin-top: 25px;
+    width: 240px;
+    height: 60px; }
+    .header-wrap .site-logo img {
+      max-width: 240px;
+      max-height: 60px; }
+
+.nc-login-layout {
+  width: 1200px;
+  margin-top: 27px;
+  margin-bottom: 40px; }
+  .nc-login-layout .nc-login-left {
+    width: 420px;
+    height: 334px;
+    float: left;
+    padding-right: 30px;
+    margin-left: 206px; }
+    .nc-login-layout .nc-login-left h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #555;
+      line-height: 30px;
+      margin-top: 2px;
+      margin-bottom: 6px; }
+    .nc-login-layout .nc-login-left ul {
+      margin-top: 20px;
+      border-bottom: dashed 1px #E7E7E7; }
+      .nc-login-layout .nc-login-left ul li {
+        font-size: 14px;
+        color: #626a73;
+        line-height: 48px;
+        display: block;
+        width: 200px;
+        height: 48px;
+        float: left;
+        padding: 0 0 12px 0;
+        margin: 0 0 5px 10px;
+        overflow: hidden; }
+        .nc-login-layout .nc-login-left ul li i {
+          display: inline-block;
+          vertical-align: middle;
+          width: 48px;
+          height: 48px;
+          margin-right: 10px; }
+      .nc-login-layout .nc-login-left ul .ico01 i {
+        background: url(../images/login.png) -256px 0 no-repeat; }
+      .nc-login-layout .nc-login-left ul .ico02 i {
+        background: url(../images/login.png) -304px 0 no-repeat; }
+      .nc-login-layout .nc-login-left ul .ico03 i {
+        background: url(../images/login.png) -352px 0 no-repeat; }
+      .nc-login-layout .nc-login-left ul .ico04 i {
+        background: url(../images/login.png) -256px -48px no-repeat; }
+      .nc-login-layout .nc-login-left ul .ico05 i {
+        background: url(../images/login.png) -304px -48px no-repeat; }
+      .nc-login-layout .nc-login-left ul .ico06 i {
+        background: url(../images/login.png) -352px -48px no-repeat; }
+      .nc-login-layout .nc-login-left ul .clear {
+        clear: both;
+        height: 0;
+        font-size: 0;
+        line-height: 0; }
+    .nc-login-layout .nc-login-left .mt20 {
+      margin-top: 20px;
+      margin-bottom: 6px; }
+    .nc-login-layout .nc-login-left .mt10 {
+      margin-top: 10px;
+      font-size: 12px; }
+      .nc-login-layout .nc-login-left .mt10 .ml20 {
+        margin-left: 20px; }
+        .nc-login-layout .nc-login-left .mt10 .ml20 a {
+          font-weight: 600;
+          line-height: 26px;
+          color: #555;
+          background: #FFF url(../images/login.png) no-repeat scroll -98px -56px;
+          text-align: center;
+          display: inline-block;
+          width: 50px;
+          height: 26px;
+          margin: 0 6px;
+          text-decoration: none; }
+        .nc-login-layout .nc-login-left .mt10 .ml20 a:hover {
+          background-position: -98px -82px;
+          color: #000; }
+      .nc-login-layout .nc-login-left .mt10 span .forget {
+        font-weight: 700;
+        color: #06C;
+        vertical-align: middle;
+        margin-left: 10px;
+        text-decoration: none; }
+      .nc-login-layout .nc-login-left .mt10 a:hover {
+        text-decoration: underline; }
+  .nc-login-layout .nc-login {
+    width: 398px;
+    float: left;
+    border: 1px solid #D8D8D8;
+    background-color: #f9f9f9;
+    position: relative; }
+    .nc-login-layout .nc-login .nc-login-title {
+      width: 100%;
+      height: 60px;
+      color: #666; }
+      .nc-login-layout .nc-login .nc-login-title h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+        padding: 15px 0 25px 25px;
+        color: #555; }
+    .nc-login-layout .nc-login .nc-login-content {
+      width: 358px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .nc-login-layout .nc-login .nc-login-content li {
+        width: 100%;
+        height: 54px;
+        color: #666; }
+        .nc-login-layout .nc-login .nc-login-content li span {
+          display: inline-block;
+          font-size: 14px;
+          line-height: 28px;
+          color: #777;
+          text-align: right;
+          width: 22%; }
+        .nc-login-layout .nc-login .nc-login-content li input {
+          font-family: Tahoma;
+          width: 220px;
+          height: 20px;
+          line-height: 20px;
+          background-color: #FFF;
+          padding: 3px !important; }
+          .nc-login-layout .nc-login .nc-login-content li input img {
+            margin-left: 5px;
+            width: 90px;
+            height: 26px; }
+        .nc-login-layout .nc-login .nc-login-content li .error {
+          font-size: 12px;
+          color: red;
+          line-height: 24px;
+          height: 24px;
+          width: 210px;
+          margin-left: 84px; }
+        .nc-login-layout .nc-login .nc-login-content li a {
+          margin-left: 5px;
+          line-height: 28px;
+          height: 28px;
+          text-align: left;
+          color: #999;
+          text-decoration: none;
+          font-size: 12px; }
+        .nc-login-layout .nc-login .nc-login-content li a:hover {
+          text-decoration: underline; }
+    .nc-login-layout .nc-login .nc-login-bottom {
+      width: 358px;
+      margin-bottom: 24px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .nc-login-layout .nc-login .nc-login-bottom .submit {
+        margin-left: 23%;
+        font-size: 14px;
+        font-weight: 700;
+        color: #FFF;
+        background: url(../images/login.png) no-repeat 0 -56px;
+        vertical-align: middle;
+        width: 98px;
+        height: 34px;
+        border: 0;
+        cursor: pointer;
+        outline: none; }
+      .nc-login-layout .nc-login .nc-login-bottom .ml10 {
+        margin-left: 10px; }
+      .nc-login-layout .nc-login .nc-login-bottom .ml5 {
+        font-size: 12px;
+        margin-left: 5px; }
+        .nc-login-layout .nc-login .nc-login-bottom .ml5 a {
+          text-decoration: none;
+          color: #c53801;
+          font-weight: 600; }
+        .nc-login-layout .nc-login .nc-login-bottom .ml5 a:hover {
+          text-decoration: underline; }
+  .nc-login-layout .shadow {
+    background: url(../images/login.png) no-repeat scroll 0 -124px;
+    width: 400px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    bottom: -40px; }
+
+#captcha {
+  width: 50px;
+  height: 20px; }
+
+#tel {
+  width: 120px;
+  height: 20px; }
+
+#btn {
+  margin-left: 10px;
+  height: 30px; }
+
+#footer {
+  font-size: 12px !important;
+  border-top: 1px solid #e7e7e7;
+  text-align: center;
+  color: #666;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 90px;
+  overflow: hidden;
+  background: #F5F5F5;
+  width: 100%; }
+  #footer p {
+    color: #666;
+    word-spacing: 5px;
+    padding: 10px 0; }
+  #footer a {
+    text-decoration: none;
+    color: #666; }
+  #footer a:hover {
+    text-decoration: underline; }
+
+/*# sourceMappingURL=register.css.map */

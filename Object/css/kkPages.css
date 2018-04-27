@@ -1,0 +1,18 @@
+/* kkPages */
+.pagination-wrapper {
+    text-align: center;
+}
+.Pagination{height: 38px;_height: 38px; line-height: 38px; color:#565656;clear:both;display:inline-block;margin:20px auto;}
+.Pagination * {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.Pagination span{margin-right: 5px;display: none;margin-left: 5px;line-height:30px;}
+.Pagination span b{padding: 0 2px;}
+.Pagination div {float:left}
+.Pagination a{ font-size: 14px;text-decoration: none;display: block;float: left;color: #005AA0;border: 1px solid #dfdfdf;height: 38px;line-height: 22px;padding: 8px;margin: 0;
+    border-right:none;min-width:38px;text-align: center}
+.Pagination a.lastPage,.Pagination a.PageNumOK{border-right:1px solid #dfdfdf;}
+.Pagination .Ellipsis {line-height: 32px;overflow: hidden; display:none;}
+cite.FormNum{display: none;float: left;line-height: 30px;height: 30px; font-style: normal; padding-left:5px;}
+#PageNum{ color:#777;width: 30px;height: 30px;line-height: 30px; border: 1px solid #dfdfdf; margin:0 5px; text-align:center;}
+.Pagination .PageNumOK{display:none;}
+.Pagination a.PageCur{background-color: #fafafa;color: #aaa; }
+.Pagination a:hover {background-color: #D93600;color: #fff;border-color:#CA3300;text-decoration: none; }

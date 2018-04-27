@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中域商城 - 4G全网通</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/kkPages.css">
+    <link rel="stylesheet" href="../css/proList.css">
+    <style>
+        .wrapper {
+            width: 1200px;
+            margin: 0 auto;
+            *zoom:1;
+        }
+        .wrapper:after{
+            visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;
+        }
+        * {
+            margin:0;
+            padding:0;
+        }
+        ul,ol {
+            list-style:none;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            color: #D93600;
+            text-decoration: underline;
+        }
+        i,em {
+            font-style: normal;
+        }
+        b {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+<div class="public-top">
+    <div class="topbar">
+        <div class="user-entry">
+            您好，欢迎来到 <a href="../index.html" title="首页" alt="首页">中域商城</a> <span>[<a href="login.html" id="user_name">登录</a>]</span> <span>[<a href="register.html" id="exit">注册</a>]</span>
+        </div>
+        <div class="quick-menu">
+            <ul>
+                <li style="margin-left: 85px">
+                    <a href="http://www.zhongyutelecom.com/">中域官网</a>
+                </li>
+                <li>
+                    <a href="http://www.zhongyu.com/wap">手机触屏版</a>
+                </li>
+                <li class="serve">
+                    <a href="http://www.zhongyu.com/shop/index.php?act=show_joinin&amp;op=index" title="免费开店">免费开店</a><i></i>
+                    <ul>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=show_joinin&amp;op=index" title="招商入驻">招商入驻</a></li>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=seller_login&amp;op=show_login" target="_blank" title="登录商家管理中心">商家登录</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    <a href="http://www.zhongyu.com/shop/index.php?act=member_order">我的订单</a><i></i>
+                    <ul>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=member_order&amp;state_type=state_new">待付款订单</a></li>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=member_order&amp;state_type=state_send">待确认收货</a></li>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=member_order&amp;state_type=state_noeval">待评价交易</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    <a href="http://www.zhongyu.com/shop/index.php?act=member_favorites&amp;op=fglist">我的收藏</a><i></i>
+                    <ul>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=member_favorites&amp;op=fglist">商品收藏</a></li>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=member_favorites&amp;op=fslist">店铺收藏</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    客户服务<i></i>
+                    <ul>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=article&amp;op=article&amp;ac_id=2">帮助中心</a></li>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=article&amp;op=article&amp;ac_id=5">售后服务</a></li>
+                        <li><a href="http://www.zhongyu.com/shop/index.php?act=article&amp;op=article&amp;ac_id=6">客服中心</a></li>
+                    </ul>
+                </li>
+                <li class="wechat">
+                    关注我们<i></i>
+                    <div class="weixin">
+                        <h4>扫描二维码<br>关注商城微信号</h4>
+                        <img src="../images/04871787573066174.png">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="header-warp cl" style="min-width: 1240px">
+    <div class="public-head-layout">
+        <h1 class="site-logo"><a href="http://www.zhongyu.com/"><img src="../images/04833010951413373.png" class="pngFix"></a></h1>
+    </div>
+    <div class="head-app">
+        <span class="pic"></span>
+        <div class="download-app">
+            <div class="qrcode">
+                <img src="http://www.zhongyu.com/data/upload/shop/common/mb_app.png">
+            </div>
+            <div class="hint">
+                <h4>扫描二维码</h4>
+                下载手机客户端
+            </div>
+            <div class="addurl">
+                <a href="javascript:void(0);" target="_blank">Android</a>
+                <a href="javascript:void(0);" target="_blank">iPhone</a>
+            </div>
+        </div>
+    </div>
+    <div class="head-search-bar">
+        <ul class="tab">
+            <li title="请输入您要搜索的商品关键字" act="search" class="current">商品</li>
+            <li title="请输入您要搜索的店铺关键字" act="store_list">店铺</li>
+        </ul>
+        <form action="" class="search-form" method="get">
+            <input placeholder="请输入您要搜索的商品关键字" name="keyword" id="keyword" class="input-text"  type="text">
+            <input id="button" value="搜索" class="input-submit" type="submit">
+        </form>
+        <div class="keyword">
+            热门搜索：
+            <ul>
+                <li><a href="javascript:void(0);">手机</a></li>
+                <li><a href="javascript:void(0);">电脑</a></li>
+                <li><a href="javascript:void(0);">蓝牙</a></li>
+                <li><a href="javascript:void(0);">手表</a></li>
+                <li><a href="javascript:void(0);">荣耀</a></li>
+                <li><a href="javascript:void(0);">iPhone8</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="head-user-menu">
+        <div class="my-mall">
+            <span class="ico"></span>我的商城<i class="arrow"></i>
+        </div>
+        <div class="shopping-car">
+            <a href="login.html" id="shopping-cart">
+                <span class="ico"></span>购物车结算<i class="arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="public-nav-layout">
+    <div class="wrapper cl">
+        <div class="all-category">
+            <div class="title">
+                <i></i>
+                <h3><a href="http://www.zhongyu.com/shop/index.php?act=category&amp;op=index">所有商品分类</a></h3>
+            </div>
+            <ul class="menu">
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-256.jpg" alt="">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="http://www.zhongyu.com/shop/index.php?act=channel&amp;op=index&amp;cate_id=256">手机通讯</a></h4>
+                        <span class="recommend-class">
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1176" title="4G全网通">4G全网通</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1372" title="老人手机">老人手机</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1076">智能手机</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1176">4G全网通丨</a>
+                            </p>
+                            <div class="brands-class">
+                                <h5>品牌：</h5>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=208">三星丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=402">苹果（APPLE）丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=383">魅族丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=382">康佳丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=379">金立丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=378">中兴丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=377">酷派丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=376">努比亚丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=375">乐视丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=374">锤子丨</a>
+                            </div>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1189">传统手机</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1372">老人手机丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-1.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="http://www.zhongyu.com/shop/index.php?act=channel&amp;op=index&amp;cate_id=1">电脑办公</a></h4>
+                        <span class="recommend-class">
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1200" title="笔记本">笔记本</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1203" title="平板电脑">平板电脑</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1205" title="台式机">台式机</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1107">电脑整机</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1200">笔记本丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1203">平板电脑丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1205">台式机丨</a>
+                            </p>
+                            <div class="brands-class">
+                                <h5>品牌：</h5>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=384">神舟丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=381">方正丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=368">索尼电脑丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=366">联想电脑丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=239">LG丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=214">苹果电脑丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=208">三星丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=184">华硕丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=180">ThinkPad丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=179">DELL丨丨</a>
+                            </div>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1109">外设配件</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1220">鼠标丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1221">键盘丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-1232.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="http://www.zhongyu.com/shop/index.php?act=channel&amp;op=index&amp;cate_id=1232">配件类</a></h4>
+                        <span class="recommend-class">
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1271" title="蓝牙耳机">蓝牙耳机</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1272" title="充电器/移动电源">充电器/移动电源</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1268">手机配件</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1271">蓝牙耳机丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1272">充电器/移动电源丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1273">数据线丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1274">手机耳机丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1276">存储卡丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1278">蓝牙音箱丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1285">耳机/耳麦丨</a>
+                            </p>
+                            <div class="brands-class">
+                                <h5>品牌：</h5>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=388">优者丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=419">赛谷丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=418">E-BLUE/宜博丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=416">巨能源丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=415">IPEARL/爱贝尔丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=414">咔哟丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=413">Viken/维肯丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=412">乔威/JOWAY丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=411">QCY丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=410">骏祺丨</a>
+                            </div>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1269">电脑配件</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1290">移动硬盘丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1291">U盘丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1296">电脑音箱丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1306">电脑包丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1328">路由器丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-1230.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="http://www.zhongyu.com/shop/index.php?act=channel&amp;op=index&amp;cate_id=1230">智能设备</a></h4>
+                        <span class="recommend-class">
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1309" title="智能手环">智能手环</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1310" title="智能手表">智能手表</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1308">智能穿戴</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1309">智能手环丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1310">智能手表丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1379">VR眼镜丨</a>
+                            </p>
+                            <div class="brands-class">
+                                <h5>品牌：</h5>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=208">三星丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=365">华为丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=217">索尼丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=420">埃微丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=388">优者丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=385">weloop丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=brand&amp;op=list&amp;brand=386">Oviphone/欧孚丨</a>
+                            </div>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1376">家居生活</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1378">生活日用丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1377">厨房小电丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-1072.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="http://www.zhongyu.com/shop/index.php?act=channel&amp;op=index&amp;cate_id=1072">运营商业务</a></h4>
+                        <span class="recommend-class">
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1134" title="合约机">合约机</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1137" title="合约机">合约机</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1145" title="合约机">合约机</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1128">中国移动</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1134">合约机丨</a>
+                            </p>
+                            <h3 style="margin-top: 20px"><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1128">中国电信</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1145">合约机丨</a>
+                            </p>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1128">中国联通</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1137">合约机丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav">
+                    <span class="ico">
+                        <img src="../images/category-pic-530.jpg">
+                    </span>
+                    <div class="cat-txt-box">
+                        <h4><a href="http://www.zhongyu.com/shop/index.php?act=channel&amp;op=index&amp;cate_id=530">客户服务</a></h4>
+                        <span class="recommend-class">
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1110" title="商品咨询">商品咨询</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1111" title="快递服务">快递服务</a>
+                        </span>
+                    </div>
+                    <div class="sub-class cl">
+                        <div class="sub-class-left">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=531">售前服务</a></h3>
+                            <p class="goods-class" style="margin-bottom: 20px;">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1110">商品咨询丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1111">快递服务丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1112">付款咨询丨</a>
+                            </p>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=532">售后服务</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1117">退换货申请丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1118">修改收货地址丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="side-nav" style="border-bottom: 1px solid #29dcfc;">
+                    <span class="ico"></span>
+                    <div class="cat-txt-box">
+                        <h4><a href="http://www.zhongyu.com/shop/index.php?act=channel&amp;op=index&amp;cate_id=1351">底价夺宝</a></h4>
+                        <span class="recommend-class">
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1357" title="移动">移动</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1358" title="联通">联通</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1359" title="电信">电信</a>
+                            <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1360" title="笔记本">笔记本</a>
+                          </span>
+                    </div>
+                    <div class="sub-class cl" style="top: -61px;">
+                        <div class="sub-class-left">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1353">电脑办公</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1360">笔记本丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1361">平板电脑丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1362">台式机丨</a>
+                            </p>
+                            <h3 style="margin-top: 15px;"><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1352">手机通讯</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1357">移动丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1358">联通丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1359">电信丨</a>
+                            </p>
+                        </div>
+                        <div class="sub-class-right">
+                            <h3><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1355">配件</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1369">手机配件丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1370">电脑配件丨</a>
+                            </p>
+                            <h3 style="margin-top: 15px;"><a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1356">智能设备</a></h3>
+                            <p class="goods-class">
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1366">智能手环丨</a>
+                                <a href="http://www.zhongyu.com/shop/index.php?act=search&amp;op=index&amp;cate_id=1367">智能手表丨</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="site-menu">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="http://www.zhongyu.com/index.php?act=channel&amp;op=low&amp;cate_id=1351"> 底价夺宝</a></li>
+            <li><a href="http://www.zhongyu.com/shop/index.php?act=pointshop&amp;op=index"> 积分兑换</a></li>
+            <li><a href="http://www.zhongyu.com/shop/index.php?act=store_list&amp;op=index">自提门店</a></li>
+            <li><a target="_blank" href="http://www.zhongyu.com/index.php?act=oldtonew">以旧换新</a></li>
+            <li><a href="http://www.zhongyu.com/shop/index.php?act=store_phone_recharge&amp;op=index" class="cz"></a></li>
+        </ul>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="left">
+        <div class="menu-box">
+            <!--块级标题区域-->
+            <div class="menu-title">
+                <h3>分类筛选</h3>
+            </div>
+            <!--左侧小盒子主要内容区域-->
+            <div class="menu-content">
+                <ul class="tree">
+                    <li>
+                        <i class="tree-parent"></i><a href="javascript:void(0);">手机通讯</a>
+                        <ul class="tree">
+                            <li>
+                                <i class="tree-parent"></i><a href="javascript:void(0);">智能手机</a>
+                                <ul class="">
+                                    <li class="tree-parent tree-parent-collapsed"><i></i><a href="javascript:void(0);" class="selected">4G全网通</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--左侧小盒子结束-->
+
+        <!-- S 推荐展位 -->
+        <div class="menu-box"></div>
+        <!-- E 推荐展位 -->
+        <div class="menu-box"></div>
+        <!-- 最近浏览 -->
+
+        <!--左侧小盒子开始，都用类名left-menu-->
+        <div class="menu-box">
+            <div class="menu-title">
+                <h3>最近浏览</h3>
+            </div>
+            <div class="menu-content">
+                <a href="javascript:void(0);" class="nch-sidebar-all-viewed">全部浏览历史</a>
+            </div>
+        </div>
+        <!--左侧小盒子结束-->
+    </div>
+
+    <!--右侧展示开始-->
+    <div class="right">
+        <div class="menu-box menu-box-top">
+            <div class="menu-title">
+                <h3>
+                    <em>4G全网通</em> -
+                    商品筛选</h3>
+            </div>
+            <div class="menu-content">
+                <div class="menu-filter">
+                    <dl class="extended-list">
+                        <dt>品牌：</dt>
+                        <dd class="list">
+                            <ul>
+                                <li><a href="javascript:void(0);">苹果（APPLE）</a></li>
+                                <li><a href="javascript:void(0);">魅族</a></li>
+                                <li><a href="javascript:void(0);">康佳</a></li>
+                                <li><a href="javascript:void(0);">金立</a></li>
+                                <li><a href="javascript:void(0);">中兴</a></li>
+                                <li><a href="javascript:void(0);">酷派</a></li>
+                                <li><a href="javascript:void(0);">努比亚</a></li>
+                                <li><a href="javascript:void(0);">乐视</a></li>
+                                <li><a href="javascript:void(0);">锤子</a></li>
+                                <li><a href="javascript:void(0);">朵唯</a></li>
+                                <li><a href="javascript:void(0);">OPPO</a></li>
+                                <li><a href="javascript:void(0);">小米</a></li>
+                                <li><a href="javascript:void(0);">VIVO</a></li>
+                                <li><a href="javascript:void(0);">酷派大神</a></li>
+                                <li><a href="javascript:void(0);">联想</a></li>
+                                <li><a href="javascript:void(0);">华为</a></li>
+                                <li><a href="javascript:void(0);">三星手机</a></li>
+                                <li><a href="javascript:void(0);">TCL</a></li>
+                                <li><a href="javascript:void(0);">索尼</a></li>
+                                <li><a href="javascript:void(0);">HTC</a></li>
+                                <li><a href="javascript:void(0);">摩托罗拉</a></li>
+                                <li><a href="javascript:void(0);">诺基亚</a></li>
+                                <li><a href="javascript:void(0);">阿尔卡特</a></li>
+                                <li><a href="javascript:void(0);">三星</a></li>
+                            </ul>
+                        </dd>
+                        <dd class="all"><span><i class="icon-angle-down"></i>更多</span></dd>
+                    </dl>
+                    <dl>
+                        <dt>屏幕尺寸：</dt>
+                        <dd class="list">
+                            <ul>
+                                <li><a href="javascript:void(0);">5.6英寸及以上</a></li>
+                                <li><a href="javascript:void(0);">5.5-5.1英寸</a></li>
+                                <li><a href="javascript:void(0);">5.0-4.6英寸</a></li>
+                                <li><a href="javascript:void(0);">4.5-3.1英寸</a></li>
+                                <li><a href="javascript:void(0);">3.0英寸及以下</a></li>
+                                <li><a href="javascript:void(0);">其它</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>系　统：</dt>
+                        <dd class="list">
+                            <ul>
+                                <li><a href="javascript:void(0);">安卓（Android）</a></li>
+                                <li><a href="javascript:void(0);">苹果（IOS）</a></li>
+                                <li><a href="javascript:void(0);">老人机</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>SIM卡尺寸：</dt>
+                        <dd class="list">
+                            <ul>
+                                <li><a href="javascript:void(0);">Nano sim卡（12.3×8.8mm）</a></li>
+                                <li><a href="javascript:void(0);">Micro sim卡（15×12mm）</a></li>
+                                <li><a href="javascript:void(0);">标准SIM卡（15×25mm）</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-list">
+            <nav class="sort-bar">
+                <div class="sortbar-array"> 排序方式：
+                    <ul>
+                        <li class="selected"><a href="javascript:void(0);" title="默认排序">默认</a></li>
+                        <li><a href="javascript:void(0);" title="点击按销量从高到低排序" class="asc">销量<i></i></a></li>
+                        <li><a href="javascript:void(0);" title="点击按人气从高到低排序">人气<i></i></a></li>
+                        <li class="sort-price"><a href="javascript:void(0);" title="点击按价格从高到低排序">价格<i></i></a></li>
+                    </ul>
+                </div>
+                <div class="sortbar-owner"><span><a href="javascript:void(0);"><i></i>平台自营</a></span></div>
+                <div class="sortbar-owner"><span><a href="javascript:void(0);"><i></i>赠品</a></span></div>
+                <div class="sortbar-location">商品所在地：
+                    <div class="select-layer">
+                        <div class="holder"><em>不限地区<!-- 所在地 --></em></div>
+                        <div class="selected"><a>不限地区<!-- 所在地 --></a></div>
+                        <i class="direction"></i>
+                        <div class="options">
+
+                            <div class="filter-detailc" id="addressDraw">
+                                <dl class="location-hots">
+                                    <dt>常用地区</dt>
+                                    <dd><a href="javascript:void(0);">北京</a></dd>
+                                    <dd><a href="javascript:void(0);">天津</a></dd>
+                                    <dd><a href="javascript:void(0);">上海</a></dd>
+                                    <dd><a href="javascript:void(0);">海外</a></dd>
+                                </dl>
+                                <dl class="location-all">
+                                    <dt>省份</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <p class="lt">A</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">安徽</a></span> <span><a href="javascript:void(0);">澳门</a></span> </p>
+                                            </li>
+                                            <li>
+                                                <p class="lt">C</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">重庆</a></span> </p>
+                                            </li>
+                                            <li>
+                                                <p class="lt">F</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">福建</a></span> </p>
+                                            </li>
+                                            <li>
+                                                <p class="lt">G</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">广东</a></span> <span><a href="javascript:void(0);">甘肃</a></span> <span><a href="javascript:void(0);">广西</a></span> <span><a href="javascript:void(0);">贵州</a></span> </p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="lt">H</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">海南</a></span> <span><a href="javascript:void(0);">河北</a></span> <span><a href="javascript:void(0);">河南</a></span> <span><a href="javascript:void(0);">黑龙江</a></span> <span><a href="javascript:void(0);">湖北</a></span> <span><a href="javascript:void(0);">湖南</a></span> </p>
+                                            </li>
+                                            <li>
+                                                <p class="lt">J</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">江苏</a></span> <span><a href="javascript:void(0);">江西</a></span> <span><a href="javascript:void(0);">吉林</a></span> </p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="lt">N</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">辽宁</a></span> <span><a href="javascript:void(0);">内蒙古</a></span> <span><a href="javascript:void(0);">宁夏</a></span> </p>
+                                            </li>
+                                            <li>
+                                                <p class="lt">Q</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">青海</a></span> </p>
+                                            </li>
+                                            <li>
+                                                <p class="lt">S</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">山东</a></span> <span><a href="javascript:void(0);">山西</a></span> <span><a href="javascript:void(0);">陕西</a></span> <span><a href="javascript:void(0);">四川</a></span> </p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="lt">T</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">台湾</a></span> </p>
+                                            </li>
+                                            <li>
+                                                <p class="lt">X</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">西藏</a></span> <span><a href="javascript:void(0);">新疆</a></span> <span><a href="javascript:void(0);">香港</a></span> </p>
+                                            </li>
+                                            <li>
+                                                <p class="lt">Y</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">云南</a></span> </p>
+                                            </li>
+                                            <li>
+                                                <p class="lt">Z</p>
+                                                <p class="lc"> <span><a href="javascript:void(0);">浙江</a></span> </p>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <p class="oreder-default"><a href="javascript:void(0);">不限地区</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="shop-list-content squares">
+                <ul class="list_pic">
+
+                </ul>
+            </div>
+            <div id="guesslike_div" style="width:980px;">
+                <div class="goods-guess-like">
+                    <div class="title">猜您喜欢的宝贝</div>
+                    <div class="content">
+                        <div class="noguess">暂无商品向您推荐</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="faq">
+    <div class="faq-wrapper cl">
+        <ul>
+            <li> <dl class="s1">
+                <dt>
+                    购物指南      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="会员介绍"> 会员介绍 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="常见问题"> 常见问题 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="联系客服"> 联系客服 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="购物流程"> 购物流程 </a></dd>
+            </dl></li>
+            <li> <dl class="s2">
+                <dt>
+                    配送方式      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="门店自提"> 门店自提 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="配送服务查询"> 配送服务查询 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="发货和签收"> 发货和签收 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="配送费收取标准"> 配送费收取标准 </a></dd>
+            </dl></li>
+            <li> <dl class="s3">
+                <dt>
+                    支付方式      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="货到付款"> 货到付款 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="邮局汇款"> 邮局汇款 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="公司转账"> 公司转账 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="分期付款"> 分期付款 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="在线支付"> 在线支付 </a></dd>
+            </dl></li>
+            <li> <dl class="s4">
+                <dt>
+                    售后服务      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="退换货政策"> 退换货政策 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="退换货流程"> 退换货流程 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="返修/退换货"> 返修/退换货 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="退款申请"> 退款申请 </a></dd>
+            </dl></li>
+            <li> <dl class="s5">
+                <dt>
+                    客服中心      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="会员修改密码"> 会员修改密码 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="会员修改个人资料"> 会员修改个人资料 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="账户安全"> 账户安全 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="修改收货地址"> 修改收货地址 </a></dd>
+            </dl></li>
+            <li> <dl class="s6">
+                <dt>
+                    关于我们      </dt>
+                <dd><i></i><a href="javascript:void(0);" title="中域官网"> 中域官网 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="合作及洽谈"> 合作及洽谈 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="招聘英才"> 招聘英才 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="关于我们"> 关于我们 </a></dd>
+                <dd><i></i><a href="javascript:void(0);" title="联系我们"> 联系我们 </a></dd>
+            </dl></li>
+        </ul>
+
+        <div class="help">
+            <div class="w1190 clearfix cl">
+                <div class="contact f-l">
+                    <div class="contact-border clearfix">
+                        <span class="ic tel t20">4006780666</span>
+                        <span class="ic mail">web1@zhongyu.com</span>
+                        <div class="attention cleafix">
+                            <div class="weixin f-l">
+                                <img src="../images/04871787573066174.png" class="f-l jImg img-error">
+                                <p class="f-l">
+                                    <span>扫一扫</span>
+                                    <span>关注我们</span>
+                                </p>
+                            </div>
+                            <div class="weibo f-l">
+                                <div class="ic qq">
+                                    <ul>
+                                        <li><a href="" target="_blank">新浪微博</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ic sina" >
+                                    <ul>
+                                        <li><a href="" target="_blank">腾讯微博</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer" class="wrapper" style="min-width: 1200px">
+    <p>
+        <a href="javascript:void(0);">首页</a>
+        | <a href="javascript:void(0);">招聘英才</a>
+        | <a href="javascript:void(0);">合作及洽谈</a>
+        | <a href="javascript:void(0);">联系我们</a>
+        | <a href="javascript:void(0);">关于我们</a>
+        | <a href="javascript:void(0);">友情链接</a>
+    </p>
+    Copyright 2017 <a href="../index.html" target="_blank">zhongyu.com</a> All rights reserved. 粤ICP备05093699号-1 粤ICP备09019533号<br>
+</div>
+
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/plugin/jquery.kkPages.js"></script>
+<script src="../js/proList.js"></script>
+</body>
+<script>
+    var cookies = document.cookie;
+    var user_name = "";
+    if (cookies) {
+        var list = cookies.split(";");
+//        ["id_goods_3=goods_3", " username_yyyyyy=yyyyyy", " id_goods_2=goods_2"]
+        for (var i = 0; i < list.length; i++) {
+            var item = list[i].split("=");
+            var key = item[0].trim();
+            var value = item[1].trim();
+            if (key.indexOf("username_") != -1) {
+                $("#shopping-cart").attr("href","shoppingCart.html");
+                user_name = value;
+                $("#user_name").text(user_name).attr("href","javascript:void(0)");
+
+                $("#exit").text("退出").css("color","red").attr("href","javascript:void(0);").click(function () {
+                    setCookie("username_" + user_nameInput.value, user_nameInput.value, 0);
+                });
+            }
+        }
+    }
+    function setCookie(key,value,day){
+        var date = new Date();
+        date.setDate(date.getDate() + day);
+        document.cookie = key + "=" + value + ";expires=" + date;
+    }
+</script>
+</html>

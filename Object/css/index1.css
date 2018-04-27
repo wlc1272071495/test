@@ -1,0 +1,213 @@
+.home-standard {
+  width: 1200px;
+  margin: auto; }
+  .home-standard .title {
+    position: relative;
+    height: 85px;
+    margin-top: 15px; }
+    .home-standard .title .tabs-nav {
+      width: 480px;
+      height: 40px;
+      right: 5px;
+      position: absolute;
+      top: 21px;
+      line-height: 40px; }
+      .home-standard .title .tabs-nav li {
+        float: left;
+        width: 120px;
+        text-align: center;
+        color: #dddee0;
+        font-size: 20px;
+        cursor: pointer; }
+      .home-standard .title .tabs-nav .tabs-selected {
+        background-color: #fff;
+        color: #f8508b; }
+  .home-standard .middle-layout {
+    width: 100%;
+    height: 272px;
+    position: relative;
+    overflow: hidden; }
+    .home-standard .middle-layout .selected {
+      position: absolute;
+      top: 0;
+      height: -272px;
+      background-color: #fff; }
+    .home-standard .middle-layout a img:hover {
+      opacity: .7; }
+  .home-standard .fl_body {
+    width: 100%;
+    margin-top: 10px;
+    border: solid 1px #ccc;
+    border-bottom: none;
+    border-right: none; }
+    .home-standard .fl_body .li_4 {
+      border-bottom: solid 1px #ccc;
+      border-right: solid 1px #ccc;
+      float: left;
+      overflow: hidden; }
+    .home-standard .fl_body .li_4:hover {
+      opacity: .7; }
+      .home-standard .fl_body .li_4:hover img {
+        transform: scale(1.01, 1.01); }
+    .home-standard .fl_body .li_5 {
+      float: left;
+      overflow: hidden; }
+      .home-standard .fl_body .li_5 .border_rb {
+        border-bottom: solid 1px #ccc;
+        border-right: solid 1px #ccc; }
+      .home-standard .fl_body .li_5 .border_rb:hover {
+        opacity: .7; }
+    .home-standard .fl_body .li_3 {
+      float: left;
+      overflow: hidden; }
+    .home-standard .fl_body .li_3:hover {
+      opacity: .7; }
+      .home-standard .fl_body .li_3:hover img {
+        transform: scale(1.01, 1.01); }
+  .home-standard .ad-wrapper {
+    margin-top: 15px;
+    width: 1200px;
+    height: 205px;
+    margin-bottom: 15px; }
+
+.mod_agree {
+  width: 100%;
+  background-color: #F5F5F5; }
+  .mod_agree .mod_agree_con {
+    width: 1200px;
+    height: 99px;
+    margin: auto;
+    padding: 15px 0 10px 0;
+    text-align: center; }
+    .mod_agree .mod_agree_con .mod_agree_item {
+      margin-top: 10px;
+      display: inline;
+      float: left;
+      width: 198px;
+      border-right: 1px dotted #CCC;
+      font-size: 12px;
+      color: #666666; }
+      .mod_agree .mod_agree_con .mod_agree_item a {
+        width: 198px;
+        height: 53px;
+        display: block;
+        padding-top: 5px; }
+    .mod_agree .mod_agree_con .mod_agree_item6 {
+      border-right: 0; }
+
+#faq {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-top: 12px;
+  padding-bottom: 15px; }
+  #faq .faq-wrapper {
+    width: 1200px;
+    margin: auto; }
+    #faq .faq-wrapper ul li {
+      font-size: 12px;
+      display: inline;
+      float: left;
+      padding-left: 40px;
+      width: 100px; }
+      #faq .faq-wrapper ul li dl {
+        width: 100%;
+        margin: 10px 0px 0px 0px; }
+        #faq .faq-wrapper ul li dl dt {
+          font-size: 14px;
+          margin-bottom: 4px;
+          font-weight: bold; }
+        #faq .faq-wrapper ul li dl dd {
+          font: 12px/1.5 "Lucida Grande",tahoma,arial,\5b8b\4f53;
+          line-height: 24px;
+          white-space: nowrap; }
+          #faq .faq-wrapper ul li dl dd a {
+            color: #666; }
+          #faq .faq-wrapper ul li dl dd a:hover {
+            text-decoration: underline; }
+    #faq .faq-wrapper .w1190 {
+      display: inline-block; }
+      #faq .faq-wrapper .w1190 .contact {
+        margin-left: 16px;
+        border-left: 1px solid #e7e7e7;
+        float: left;
+        font-size: 12px; }
+        #faq .faq-wrapper .w1190 .contact .contact-border {
+          padding: 0px 0 20px 50px;
+          border-left: 1px solid #fff;
+          display: inline-block; }
+          #faq .faq-wrapper .w1190 .contact .contact-border .tel {
+            color: #00B492;
+            font-size: 20px;
+            height: 26px;
+            line-height: 26px;
+            padding-left: 36px;
+            display: block;
+            background: url(../images/hd-and-btm.png) 0 -250px no-repeat; }
+          #faq .faq-wrapper .w1190 .contact .contact-border .mail {
+            font-size: 16px;
+            color: #666;
+            height: 26px;
+            line-height: 26px;
+            padding-left: 36px;
+            display: block;
+            background: url(../images/hd-and-btm.png) 0 -280px no-repeat; }
+          #faq .faq-wrapper .w1190 .contact .contact-border .attention {
+            padding-top: 10px; }
+            #faq .faq-wrapper .w1190 .contact .contact-border .attention .weixin {
+              width: 150px;
+              height: 62px;
+              float: left; }
+              #faq .faq-wrapper .w1190 .contact .contact-border .attention .weixin img {
+                width: 62px;
+                height: 62px;
+                float: left; }
+              #faq .faq-wrapper .w1190 .contact .contact-border .attention .weixin p {
+                width: 70px;
+                height: 62px;
+                float: left; }
+                #faq .faq-wrapper .w1190 .contact .contact-border .attention .weixin p span {
+                  display: block;
+                  line-height: 31px;
+                  height: 31px;
+                  padding: 0 16px 0 6px;
+                  color: #666; }
+            #faq .faq-wrapper .w1190 .contact .contact-border .attention .weibo {
+              float: left; }
+              #faq .faq-wrapper .w1190 .contact .contact-border .attention .weibo .qq {
+                height: 30px;
+                line-height: 30px;
+                color: #666;
+                display: block;
+                background: url(../images/hd-and-btm.png) 0 -340px no-repeat; }
+              #faq .faq-wrapper .w1190 .contact .contact-border .attention .weibo .sina {
+                height: 30px;
+                line-height: 30px;
+                color: #666;
+                display: block;
+                background: url(../images/hd-and-btm.png) 0 -310px no-repeat; }
+              #faq .faq-wrapper .w1190 .contact .contact-border .attention .weibo a:hover {
+                text-decoration: underline;
+                color: red; }
+
+#footer {
+  font-size: 12px !important;
+  border-top: 1px solid #e7e7e7;
+  text-align: center;
+  color: #666;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 90px;
+  overflow: hidden;
+  background: #F5F5F5;
+  width: 100%; }
+  #footer p {
+    color: #666;
+    word-spacing: 5px;
+    padding: 10px 0; }
+  #footer a {
+    text-decoration: none;
+    color: #666; }
+  #footer a:hover {
+    text-decoration: underline; }
+
+/*# sourceMappingURL=index1.css.map */

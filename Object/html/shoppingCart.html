@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中域商城</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/shoppingCart.css">
+    <style>
+        .wrapper {
+            width: 1200px;
+            margin: 0 auto;
+            *zoom:1;
+        }
+        .wrapper:after{
+            visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;
+        }
+
+        * {
+            margin:0;
+            padding:0;
+        }
+        ul,ol {
+            list-style:none;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            color: #D93600;
+            text-decoration: underline;
+        }
+        i,em {
+            font-style: normal;
+        }
+        b {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+<div class="public-top">
+    <div class="topbar">
+        <div class="user-entry">
+            您好，欢迎来到 <a href="../index.html" title="首页" alt="首页">中域商城</a> <span>[<a href="login.html" id="user_name">登录</a>]</span> <span>[<a href="register.html" id="exit">注册</a>]</span>
+        </div>
+        <div class="quick-menu">
+            <ul>
+                <li style="margin-left: 85px">
+                    <a href="javascript:void(0);">中域官网</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">手机触屏版</a>
+                </li>
+                <li class="serve">
+                    <a href="javascript:void(0);" title="免费开店">免费开店</a><i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);" title="招商入驻">招商入驻</a></li>
+                        <li><a href="javascript:void(0);" target="_blank" title="登录商家管理中心">商家登录</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    <a href="javascript:void(0);">我的订单</a><i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);">待付款订单</a></li>
+                        <li><a href="javascript:void(0);">待确认收货</a></li>
+                        <li><a href="javascript:void(0);">待评价交易</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    <a href="javascript:void(0);">我的收藏</a><i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);">商品收藏</a></li>
+                        <li><a href="javascript:void(0);">店铺收藏</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    客户服务<i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);">帮助中心</a></li>
+                        <li><a href="javascript:void(0);">售后服务</a></li>
+                        <li><a href="javascript:void(0);">客服中心</a></li>
+                    </ul>
+                </li>
+                <li class="wechat">
+                    关注我们<i></i>
+                    <div class="weixin">
+                        <h4>扫描二维码<br>关注商城微信号</h4>
+                        <img src="../images/04871787573066174.png">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<header class="ncc-head-layout">
+    <div class="site-logo"><a href="javascript:void(0);"><img src="../images/logo-cart.png" class="pngFix"></a></div>
+    <ul class="ncc-flow">
+        <li class="current"><i class="step1"></i>
+            <p>我的购物车</p>
+            <sub></sub>
+            <div class="hr"></div>
+        </li>
+        <li class=""><i class="step2"></i>
+            <p>填写核对购物信息</p>
+            <sub></sub>
+            <div class="hr"></div>
+        </li>
+        <li class=""><i class="step3"></i>
+            <p>支付提交</p>
+            <sub></sub>
+            <div class="hr"></div>
+        </li>
+        <li class=""><i class="step4"></i>
+            <p>订单完成</p>
+            <sub></sub>
+            <div class="hr"></div>
+        </li>
+    </ul>
+</header>
+<div class="ncc-wrapper">
+    <div class="ncc-title">
+        <h3>我的购物车</h3>
+        <h5>查看购物车商品清单，增加减少商品数量，并勾选想要的商品进入下一步操作。</h5>
+    </div>
+
+    <form action="http://www.zhongyu.com/shop/index.php?act=buy&op=buy_step1" method="POST" id="form_buy" name="form_buy">
+        <input type="hidden" value="1" name="ifcart">
+        <table class="ncc-table-style" nc_type="table_cart">
+            <thead>
+            <tr>
+                <th class="w50"><label>
+                    <input type="checkbox" value="1" id="selectAll">
+                    全选</label></th>
+                <th></th>
+                <th>商品</th>
+                <th class="w120">单价(元)</th>
+                <th class="w120">数量</th>
+                <th class="w120">小计(元)</th>
+                <th class="w80">操作</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            <tr>
+                <th colspan="20">
+                    <strong>
+                        店铺：
+                        <a href="JavaScript:void(0);">
+                            电子商务仓
+                        </a></strong> <span member_id="8"></span><div class="store-sale"><em><i class="icon-gift"></i>免运费</em>满99免运费&emsp;</div>
+                    </th>
+                </tr>
+
+            <!-- S one store list -->
+
+
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="20"><div class="ncc-all-account">商品总价（不含运费）<em id="cartTotal">0</em>元</div></td>
+            </tr>
+            </tfoot>
+        </table>
+    </form>
+    <div class="ncc-bottom"><a id="next_submit" href="javascript:void(0)" class="ncc-btn ncc-btn-acidblue fr">下一步，填写核对购物信息</a></div>
+    <div id="guesslike_div" style="width:1000px;">
+        <div class="goods-guess-like">
+            <div class="title">猜您喜欢的宝贝</div>
+            <div class="content">
+                <div class="noguess">暂无商品向您推荐</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer" class="wrapper" style="min-width: 1200px">
+    <p>
+        <a href="../index.html">首页</a>
+        | <a href="javascript:void(0);">招聘英才</a>
+        | <a href="javascript:void(0);">合作及洽谈</a>
+        | <a href="javascript:void(0);">联系我们</a>
+        | <a href="javascript:void(0);">关于我们</a>
+        | <a href="javascript:void(0);">友情链接</a>
+    </p>
+    Copyright 2017 <a href="../index.html" target="_blank">zhongyu.com</a> All rights reserved. 粤ICP备05093699号-1 粤ICP备09019533号<br>
+</div>
+</body>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<!--<script src="../js/shoppingCart.js"></script>-->
+<script>
+    var cookies = document.cookie;
+    var goodIdList = [];
+    var user_name = "";
+//    ["goods_3", "goods_2"]
+    if (cookies) {
+        // "id_6=6; price_6=10; src_6=images/6.jpg; id_12=12; price_12=10; src_12=images/6.jpg"
+        var list = cookies.split(";");
+//        ["id_goods_3=goods_3", " username_yyyyyy=yyyyyy", " id_goods_2=goods_2"]
+        for (var i = 0; i < list.length; i++) {
+            var item = list[i].split("=");
+            var key = item[0].trim();
+            var value = item[1].trim();
+            if (key.indexOf("id_") != -1) {
+                goodIdList.push(value);
+            }
+            if (key.indexOf("username_") != -1) {
+                user_name = value;
+                $("#user_name").text(user_name).attr("href","javascript:void(0)");
+
+                $("#exit").text("退出").css("color","red").attr("href","javascript:void(0);").click(function () {
+                    setCookie("username_" + user_nameInput.value, user_nameInput.value, 0);
+                });
+
+            }
+        }
+    }
+
+    for(var i = 0;i  < goodIdList.length;i++){
+        var goodsid = goodIdList[i];
+        $.ajax({
+            type: "get",
+            url: "http://qxu2149950238.my3w.com/zhongyu/findId.php",
+            data: {id: goodsid},
+            success: function (result) {
+                var item = JSON.parse(result);
+
+                var imageSrc = item.imageSrc;
+                var goodsName = item.goodsName;
+                var goodsPrice = item.goodsPrice;
+
+                var str = "";
+                str += `
+                <tr id="cart_item_1825" nc_group="1825" class="shop-list ">
+                <td>
+                <input type="checkbox" nc_type="eachGoodsCheckBox" value="1825|1" id="cart_id1825" name="cart_id[]" class="checkGoods">
+                </td>
+                <td class="w60">
+                <a href="JavaScript:void(0);" target="_blank" class="ncc-goods-thumb"><img src="${imageSrc}" alt="${goodsName}" /></a>
+                </td>
+                <td class="tl" >
+                <dl class="ncc-goods-info">
+                    <dt>
+                        <a href="JavaScript:void(0);" target="_blank">${goodsName}</a>
+                    </dt>
+                </dl>
+                </td>
+                <td class="w120"><em id="item1825_price">${goodsPrice}</em></td>
+                    <td class="w120 ws0"><a href="JavaScript:void(0);" onclick="" title="减少商品件数" class="add-substract-key tip reduce">-</a>
+                    <input id="input_item_1825" value="1" orig="1" changed="1" type="text" class="text w20"/>
+                    <a href="JavaScript:void(0);" onclick="" title="增加商品件数" class="add-substract-key tip add" >+</a></td>
+                    <td class="w120">            <em id="item1825_subtotal" nc_type="eachGoodsTotal">${goodsPrice}</em>
+                    </td>
+                    <td class="w80">            <a href="javascript:void(0)">收藏</a><br/>
+                    <a href="javascript:void(0)" class="delete">删除</a></td>
+                </tr>
+        `
+                $('#tbody').append(str);
+
+                //删除按键
+                $(".delete").click(function () {
+                    $(this).parents('.shop-list').remove();
+                    setCookie("id_" + goodsid, goodsid, -7);
+                });
+                //增加数量
+                $(".add").click(function () {
+                    var num1 = $(this).prev(".text").val()*1 + 1;
+                    $(this).prev(".text").val(num1);
+                    var smallTotal = ($(this).parent().prev(".w120").text() * num1).toFixed(2);
+                    $(this).parent().next(".w120").text(smallTotal);
+                });
+                //减少数量
+                $(".reduce").click(function () {
+                    var num2 = $(this).next(".text").val()*1 - 1;
+                    if(num2 < 0){
+                        $(this).parents('.shop-list').remove();
+                        setCookie("id_" + goodsid, goodsid, -7);
+                    }
+                    $(this).next(".text").val(num2);
+                    var smallTotal = ($(this).parent().prev(".w120").text() * num2).toFixed(2);
+                    $(this).parent().next(".w120").text(smallTotal);
+                })
+
+                $('input[name="cart_id[]"]').click(function () {
+                    if($(this).prop("checked")){
+                        arr.push($(this).parent().siblings().eq(4).text()*1);
+                    }else{
+                        arr.splice($.inArray('$(this).parent().siblings().eq(4).text()*1',arr),1);
+                    }
+                    $("#cartTotal").text(arr.sum());
+                })
+            }
+        })
+    }
+
+    $("#next_submit").click(function () {
+        window.location.href = "address.html";
+    })
+
+    $(".checkGoods")
+    var arr = [];
+    Array.prototype.sum = function (){
+        var result = 0;
+        for(var i = 0; i < this.length; i++) {
+            result += this[i];
+        }
+        return result;
+    };
+    function setCookie(key,value,day){
+        var date = new Date();
+        date.setDate(date.getDate() + day);
+        document.cookie = key + "=" + value + ";expires=" + date;
+    }
+</script>
+</html>

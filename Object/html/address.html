@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中域商城</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/shoppingCart.css">
+    <style>
+        .wrapper {
+            width: 1200px;
+            margin: 0 auto;
+            *zoom:1;
+        }
+        .wrapper:after{
+            visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;
+        }
+
+        * {
+            margin:0;
+            padding:0;
+        }
+        ul,ol {
+            list-style:none;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            color: #D93600;
+            text-decoration: underline;
+        }
+        i,em {
+            font-style: normal;
+        }
+        b {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+<div class="public-top">
+    <div class="topbar">
+        <div class="user-entry">
+            您好，欢迎来到 <a href="../index.html" title="首页" alt="首页">中域商城</a> <span>[<a href="login.html" id="user_name">登录</a>]</span> <span>[<a href="register.html" id="exit">注册</a>]</span>
+        </div>
+        <div class="quick-menu">
+            <ul>
+                <li style="margin-left: 85px">
+                    <a href="javascript:void(0);">中域官网</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">手机触屏版</a>
+                </li>
+                <li class="serve">
+                    <a href="javascript:void(0);" title="免费开店">免费开店</a><i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);" title="招商入驻">招商入驻</a></li>
+                        <li><a href="javascript:void(0);" target="_blank" title="登录商家管理中心">商家登录</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    <a href="javascript:void(0);">我的订单</a><i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);">待付款订单</a></li>
+                        <li><a href="javascript:void(0);">待确认收货</a></li>
+                        <li><a href="javascript:void(0);">待评价交易</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    <a href="javascript:void(0);">我的收藏</a><i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);">商品收藏</a></li>
+                        <li><a href="javascript:void(0);">店铺收藏</a></li>
+                    </ul>
+                </li>
+                <li class="serve">
+                    客户服务<i></i>
+                    <ul>
+                        <li><a href="javascript:void(0);">帮助中心</a></li>
+                        <li><a href="javascript:void(0);">售后服务</a></li>
+                        <li><a href="javascript:void(0);">客服中心</a></li>
+                    </ul>
+                </li>
+                <li class="wechat">
+                    关注我们<i></i>
+                    <div class="weixin">
+                        <h4>扫描二维码<br>关注商城微信号</h4>
+                        <img src="../images/04871787573066174.png">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<header class="ncc-head-layout">
+    <div class="site-logo"><a href="javascript:void(0);"><img src="../images/logo-cart.png" class="pngFix"></a></div>
+    <ul class="ncc-flow">
+        <li class=""><i class="step1"></i>
+            <p>我的购物车</p>
+            <sub></sub>
+            <div class="hr"></div>
+        </li>
+        <li class="current"><i class="step2"></i>
+            <p>填写核对购物信息</p>
+            <sub></sub>
+            <div class="hr"></div>
+        </li>
+        <li class=""><i class="step3"></i>
+            <p>支付提交</p>
+            <sub></sub>
+            <div class="hr"></div>
+        </li>
+        <li class=""><i class="step4"></i>
+            <p>订单完成</p>
+            <sub></sub>
+            <div class="hr"></div>
+        </li>
+    </ul>
+</header>
+<div class="ncc-wrapper">
+    <div class="ncc-title">
+        <h3>填写核对购物信息</h3>
+        <h5>请仔细核对填写收货、发票等信息，以确保物流快递及时准确投递。</h5>
+    </div>
+    <div class="ncc-receipt-info current_box" style="overflow: hidden;">
+        <div class="ncc-receipt-info-title" style="position: relative;">
+            <h3>收货人信息</h3>
+            <div id="edit-address" style="position: absolute;right: 100px;top: 0;width: 60px;height: 25px;font-size: 14px;background-color: #cdcdcd;border-radius: 10px;cursor: pointer;text-align: center;line-height: 25px;">展开</div>
+            <a href="javascript:void(0)" nc_type="buy_edit" id="edit_reciver" style="display: none;">[修改]</a>
+        </div>
+        <div id="addr_list" class="ncc-candidate-items">
+            <ul>
+                <li class="receive_add addr_item">
+                    <input value="0" nc_type="addr" id="add_addr" type="radio" name="addr" checked="checked">
+                    <label for="add_addr">使用新地址</label>
+                    &nbsp;<label><a class="del" href="javascript:void(0);" target="_blank">使用自提服务站 </a></label>
+                </li>
+                <div id="add_addr_box"><div class="ncc-form-default">
+                    <form method="POST" id="addr_form" action="index.php">
+                        <input type="hidden" value="buy" name="act">
+                        <input type="hidden" value="add_addr" name="op">
+                        <input type="hidden" name="form_submit" value="ok">
+                        <dl>
+                            <dt><i class="required">*</i>收货人姓名：</dt>
+                            <dd>
+                                <input type="text" class="text w100" name="true_name" maxlength="20" id="true_name" value="">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><i class="required">*</i>所在地区：</dt>
+                            <dd>
+                                <div id="region">
+                                    <select class="w110" name="province" id="province">
+                                        <option>-请选择-</option>
+                                    </select>
+                                    <select name="city" id="city">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                    <select name="town" id="town">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><i class="required">*</i>详细地址：</dt>
+                            <dd>
+                                <input type="text" class="text w500" name="address" id="address" maxlength="80" value="">
+                                <p class="hint">请填写真实地址，不需要重复填写所在地区</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt> <i class="required">*</i>手机号码：</dt>
+                            <dd>
+                                <input type="text" class="text w200" name="mob_phone" id="mob_phone" maxlength="15" value="">
+                                &nbsp;&nbsp;(或)&nbsp;固定电话：        <input type="text" class="text w200" id="tel_phone" name="tel_phone" maxlength="20" value="">
+                            </dd>
+                        </dl>
+                    </form>
+                </div>
+
+                </div>
+            </ul>
+        </div>
+        <div class="hr16">
+            <a id="hide_addr_list" style="padding: 10px 10px 10px 10px;background: #5BB75B;color:#FFF;" class="ncc-btn ncc-btn-red" href="javascript:void(0);">保存信息</a>
+        </div>
+    </div>
+    <div class="ncc-receipt-info ncc-receipt-info-1" style="color: #777;padding: 9px 19px;border: solid 1px #EEE; background-color: #fff;height: 440px;">
+        <div class="ncc-receipt-info-title">
+            <h3>商品清单</h3>
+        </div>
+        <table class="ncc-table-style">
+            <thead>
+            <tr>
+                <th class="w20"></th>
+                <th></th>
+                <th>商品</th>
+                <th class="w120">单价(元)</th>
+                <th class="w120">数量</th>
+                <th class="w120">小计(元)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th colspan="20"><strong>店铺：<a href="http://www.zhongyu.com/shop/index.php?act=show_store&amp;op=index&amp;store_id=3">电子商务仓</a></strong> <span member_id="8"></span>
+                    <div class="store-sale">
+                        <em><i class="icon-gift"></i>店铺活动-免运费</em>满99免运费                                  </div></th>
+            </tr>
+            <tr id="cart_item_1825" class="shop-list ">
+                <td>          <input type="hidden" value="1825|1" name="cart_id[]">
+                </td>
+                <td class="w60"><a href="javascript:void(0)" target="_blank" class="ncc-goods-thumb"><img src="../images/3_05593085589881814_60.jpg" alt="Apple iPhone 8 Plus  移动联通电信4G手机 深空灰色 256GB"></a></td>
+                <td class="tl"><dl class="ncc-goods-info">
+                    <dt><a href="javascript:void(0)" target="_blank">Apple iPhone 8 Plus  移动联通电信4G手机 深空灰色 256GB</a></dt>
+                </dl></td>
+                <td class="w120"><em>7988.00</em></td>
+                <td class="w60">1</td>
+                <td class="w120">          <em id="item1825_subtotal" nc_type="eachGoodsTotal">7988.00</em>
+                </td>
+                <td></td>
+            </tr>
+
+            <!-- S bundling goods list -->
+            <!-- E bundling goods list -->
+
+            <tr>
+                <td class="w10"></td>
+                <td class="tl" colspan="2">买家留言：
+                    <textarea name="pay_message[3]" class="ncc-msg-textarea" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）" title="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）" maxlength="150"></textarea></td>
+                <td class="tl" colspan="10"><div class="ncc-form-default"> </div></td>
+            </tr>
+
+
+            <tr>
+                <td class="tr" colspan="20"><div class="ncc-store-account">
+                    <dl class="freight" style="line-height: 28px;">
+                        <dt style="display: inline-block">运费：</dt>
+                        <dd style="display: inline-block;margin: 0 20px 0 15px;"><em id="eachStoreFreight_3">0.00</em>元</dd>
+                    </dl>
+                    <dl style="line-height: 28px;">
+                        <dt style="display: inline-block">商品金额：</dt>
+                        <dd style="display: inline-block;margin: 0 20px 0 15px;"><em id="eachStoreGoodsTotal_3">7988.00</em>元</dd>
+                    </dl>
+
+                    <!-- S voucher list -->
+
+
+                    <!-- E voucher list -->
+
+                    <dl class="total" style="line-height: 28px;">
+                        <dt style="display: inline-block">本店合计：</dt>
+                        <dd style="display: inline-block;margin: 0 20px 0 15px;"><em store_id="3" nc_type="eachStoreTotal">7988.00</em>元</dd>
+                    </dl>
+                </div></td>
+            </tr>
+
+            <!-- S 预存款 & 充值卡 -->
+            <!-- E 预存款 -->
+
+            <!-- S 通宝 -->
+            <!-- E 预存款 -->
+
+            <!-- S fcode -->
+            <!-- E fcode -->
+
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="20"><div class="ncc-all-account">订单总金额：<em id="orderTotal">7988.00</em>元</div></td>
+            </tr>
+            </tfoot>
+        </table>
+        <div class="ncc-bottom"> <a href="javascript:void(0)" id="submitOrder" class="ncc-btn fr">确认付款</a> </div>
+    </div>
+
+</div>
+
+<div id="footer" class="wrapper" style="min-width: 1200px">
+    <p>
+        <a href="../index.html">首页</a>
+        | <a href="javascript:void(0);">招聘英才</a>
+        | <a href="javascript:void(0);">合作及洽谈</a>
+        | <a href="javascript:void(0);">联系我们</a>
+        | <a href="javascript:void(0);">关于我们</a>
+        | <a href="javascript:void(0);">友情链接</a>
+    </p>
+    Copyright 2017 <a href="../index.html" target="_blank">zhongyu.com</a> All rights reserved. 粤ICP备05093699号-1 粤ICP备09019533号<br>
+</div>
+</body>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/plugin/area.js"></script>
+<script src="../js/plugin/select.js"></script>
+<script>
+    var cookies = document.cookie;
+    var user_name = "";
+    if (cookies) {
+        var list = cookies.split(";");
+//        ["id_goods_3=goods_3", " username_yyyyyy=yyyyyy", " id_goods_2=goods_2"]
+        for (var i = 0; i < list.length; i++) {
+            var item = list[i].split("=");
+            var key = item[0].trim();
+            var value = item[1].trim();
+            if (key.indexOf("username_") != -1) {
+                user_name = value;
+                $("#user_name").text(user_name).attr("href","javascript:void(0)");
+//                $("#user_name").attr("href","javascript:void(0)");
+                $("#exit").text("退出").css("color","red").attr("href","javascript:void(0);").click(function () {
+                    setCookie("username_" + user_nameInput.value, user_nameInput.value, 0);
+                });
+//                $("#exit").attr("href","javascript:void(0);");
+//                $("#exit").click(function () {
+//                    setCookie("username_" + user_nameInput.value, user_nameInput.value, 0);
+//                });
+            }
+        }
+    }
+    $("#hide_addr_list").click(function () {
+        $(".current_box").stop(true, true).animate({"height": "22px"});
+        //alert($(".current_box"));
+    })
+    $("#edit-address").click(function () {
+        $(".current_box").stop(true, true).animate({"height": "350px"});
+    })
+    $("#edit-address").hover(function () {
+        $(this).css("background-color","red");
+    },function(){
+        $(this).css("background-color","#cdcdcd");
+    })
+    $("#submitOrder").click(function () {
+        alert("付款成功！");
+    })
+    function setCookie(key,value,day){
+        var date = new Date();
+        date.setDate(date.getDate() + day);
+        document.cookie = key + "=" + value + ";expires=" + date;
+    }
+</script>
+</html>

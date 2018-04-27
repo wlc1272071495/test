@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中域商城 - 忘记密码</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+<div class="header-wrap">
+    <h1 class="site-logo">
+        <a href="../index.html">
+            <img src="../images/04833010951413373.png" class="pngFix">
+        </a>
+    </h1>
+</div>
+<div class="nc-login-layout cl">
+    <div class="nc-login-left">
+        <img src="../images/4.jpg" border="0">
+    </div>
+    <div class="nc-login">
+        <div class="nc-login-title">
+            <h3>忘记密码</h3>
+        </div>
+        <ul class="nc-login-content">
+            <li>
+                <span>手机号</span>
+                <input type="text" id="tel" name="tel" class="text tip" title="请输入您的注册手机号" autofocus="">
+                <div class="error" id="error1"  style="display: none;font-size: 12px;color: red;line-height: 24px;height: 24px;width: 210px;margin-left: 84px;">此账号未注册</div>
+            </li>
+            <li>
+                <span>新密码</span>
+                <input type="password" id="pwd1" title="6-20位字符，可由英文、数字及标点符号组成">
+                <div class="error" id="error2"  style="display: none;font-size: 12px;color: red;line-height: 24px;height: 24px;width: 210px;margin-left: 84px;">密码长度应在6-20个字符之间</div>
+            </li>
+            <li>
+                <span>确认密码</span>
+                <input type="password" id="pwd2" title="请再次输入您的密码">
+                <div class="error" id="error3"  style="display: none;font-size: 12px;color: red;line-height: 24px;height: 24px;width: 210px;margin-left: 84px;">两次输入的密码不一致</div>
+            </li>
+            <li>
+                <span>验证码</span>
+                <input type="text" id="captcha">
+                <button id="btn">发送验证码</button>
+            </li>
+        </ul>
+        <div class="nc-login-bottom">
+            <button id="Submit" class="submit" title="重置密码">重置密码</button>
+        </div>
+        <div class="nc-login-bottom"></div>
+        <div class="shadow"></div>
+    </div>
+</div>
+<div id="footer" class="wrapper" style="min-width: 1200px">
+    <p>
+        <a href="../index.html">首页</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=article&amp;article_id=24">招聘英才</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=article&amp;article_id=25">合作及洽谈</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=article&amp;article_id=23">联系我们</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=article&amp;article_id=22">关于我们</a>
+        | <a href="http://www.zhongyu.com/shop/index.php?act=link">友情链接</a>
+    </p>
+    Copyright 2017 <a href="../index.html" target="_blank">zhongyu.com</a> All rights reserved. 粤ICP备05093699号-1 粤ICP备09019533号<br>
+</div>
+</body>
+<script src="../js/ajax.js"></script>
+<script>
+    var telInput = document.querySelector("#tel");
+    var pwd1Input = document.querySelector("#pwd1");
+    var pwd2Input = document.querySelector("#pwd2");
+    var btn = document.querySelector("#btn");
+    var Submit = document.querySelector("#Submit");
+    var codeInput = document.querySelector("#captcha");
+
+    var error1 = document.querySelector("#error1");
+    var error2 = document.querySelector("#error2");
+    var error3 = document.querySelector("#error3");
+
+    pwd1Input.onblur = function () {
+        var pwd1 = pwd1Input.value;
+        if(pwd1 != ""){
+            var regPassword = /[a-zA-Z0-9]{6,20}$/;
+            if(regPassword.test(pwd1)){
+                error2.style.display = "block";
+                error2.innerHTML = "密码格式正确√";
+                error2.style.color = "green";
+                Submit.disabled = false;
+            }else{
+                Submit.disabled = true;
+                error2.style.display = "block";
+                error2.innerHTML = "密码长度应在6-20个字符之间";
+                error2.style.color = "red";
+            }
+        }else{
+            Submit.disabled = true;
+        }
+    }
+
+    pwd2Input.onblur = function () {
+        var pwd1 = pwd1Input.value;
+        var pwd2 = pwd2Input.value;
+        if(pwd2 != ""){
+            if(pwd1 != "" && pwd1 == pwd2){
+                error3.style.display = "block";
+                error3.innerHTML = "密码一致√";
+                error3.style.color = "green";
+                Submit.disabled = false;
+            }else{
+                Submit.disabled = true;
+                error3.style.display = "block";
+                error3.innerHTML = "两次输入的密码不一致";
+                error3.style.color = "red";
+            }
+        }else{
+            Submit.disabled = true;
+        }
+    }
+
+    btn.onclick = function () {
+        $.ajax({
+            type: "get",
+            url: "http://qxu2149950238.my3w.com/zhongyu/telIsExist.php",
+            data: {tel: telInput.value},
+            success: function (result) {
+                var item = JSON.parse(result);
+                if (item.code) {
+                    $.ajax({
+                        type: "get",
+                        url: "http://qxu2149950238.my3w.com/zhongyu/phpApiDemo/apiDemo/b.php",
+                        data: {tel: telInput.value},
+                        success: function (result) {
+                            var item = JSON.parse(result);
+                            if (item.code == 1) {
+                                btn.innerHTML = "发送成功";
+                                btn.disabled = true;
+                            } else {
+                                alert(item.msg);
+                            }
+                        }
+                    });
+                } else {
+                    error1.style.display = "block";
+                    //alert("该手机号没有注册 ,请你使用快速登陆方式");
+                }
+            }
+        });
+    }
+    Submit.onclick = function () {
+        $.ajax({
+            type: "get",
+            url: "http://qxu2149950238.my3w.com/zhongyu/findpwd.php",
+            data: {tel: telInput.value, pwd: pwd1Input.value, code: codeInput.value},
+            success: function (result) {
+                var item = JSON.parse(result);
+                if (item.code == "1") {
+                    window.location.href = "login.html";
+                } else {
+                    //alert(item.msg);
+                    error1.style.display = "block";
+                }
+            }
+        });
+    }
+</script>
+</html>

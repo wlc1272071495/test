@@ -1,0 +1,221 @@
+{
+  "proList":[
+    {
+      "goodsid":"goods_1",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2499.00",
+      "imageSrc":"../images/pro1.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_2",
+      "proName":"Apple iPhone 8 Plus  移动联通电信4G手机 深空灰色 256GB",
+      "proPrice":"7988.00",
+      "imageSrc":"../images/3_05593085589881814_360.jpg",
+      "imageArr":["../images/3_05593087198909676_360.jpg","../images/3_05593087220031419_360.jpg","../images/3_05593087236140045_360.jpg","../images/3_05593087236140045_360.jpg","../images/3_05593087253194374_360.jpg"]
+    },
+
+    {
+      "goodsid":"goods_3",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2699.00",
+      "imageSrc":"../images/pro3.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+
+    {
+      "goodsid":"goods_4",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2299.00",
+      "imageSrc":"../images/pro4.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+
+    {
+      "goodsid":"goods_5",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"1599.00",
+      "imageSrc":"../images/pro5.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+
+    {
+      "goodsid":"goods_6",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"899.00",
+      "imageSrc":"../images/pro6.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+
+    {
+      "goodsid":"goods_7",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"1999.00",
+      "imageSrc":"../images/pro1.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+
+    {
+      "goodsid":"goods_8",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2949.00",
+      "imageSrc":"../images/pro2.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+
+    {
+      "goodsid":"goods_9",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"799.00",
+      "imageSrc":"../images/pro3.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_10",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"1299.00",
+      "imageSrc":"../images/pro4.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_11",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"1499.00",
+      "imageSrc":"../images/pro5.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_12",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"5499.00",
+      "imageSrc":"../images/pro6.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_13",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2333.00",
+      "imageSrc":"../images/pro1.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_14",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"299.00",
+      "imageSrc":"../images/pro2.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_15",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"1099.00",
+      "imageSrc":"../images/pro3.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_16",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"3399.00",
+      "imageSrc":"../images/pro4.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_17",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"4488.00",
+      "imageSrc":"../images/pro5.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_18",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2028.00",
+      "imageSrc":"../images/pro6.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_19",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2300.00",
+      "imageSrc":"../images/pro1.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_20",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"3299.00",
+      "imageSrc":"../images/pro2.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_21",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"1399.00",
+      "imageSrc":"../images/pro3.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_22",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"6399.00",
+      "imageSrc":"../images/pro4.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_23",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"3488.00",
+      "imageSrc":"../images/pro5.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_24",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"1028.00",
+      "imageSrc":"../images/pro6.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_25",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"433.00",
+      "imageSrc":"../images/pro1.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_26",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"699.00",
+      "imageSrc":"../images/pro2.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_27",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"1199.00",
+      "imageSrc":"../images/pro3.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_28",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"2399.00",
+      "imageSrc":"../images/pro4.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_29",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"5488.00",
+      "imageSrc":"../images/pro5.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    },
+    {
+      "goodsid":"goods_30",
+      "proName":"努比亚 nubia M2 全网通 美颜双摄手机 香槟金 64GB后置双1300万索尼摄像头",
+      "proPrice":"5028.00",
+      "imageSrc":"../images/pro6.jpg",
+      "imageArr":["../images/pro1.jpg","../images/pro2.jpg","../images/pro3.jpg","../images/pro4.jpg","../images/pro5.jpg"]
+    }
+  ]
+}
